@@ -32,4 +32,3 @@ while choice != "5":
     else:
         print("Invalid choice")
 print("Thank you for using the D&D Dice App")
-
