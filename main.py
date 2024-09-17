@@ -8,8 +8,23 @@ print(f"{Fore.red}{Back.black}Welcome to the D&D Dice Application{Style.reset}\n
 def main_menu():
     print("Enter 1 to roll dice")
     print("Enter 2 to roll a d20 with advantage or disadvantage")
-    print("Enter 3 to view saved combo's")
-    print("Enter 4 to exit the app")
+    print("Enter 3 to create a dice combination to save")
+    print("Enter 4 to view saved dice combinations")
+    print("Enter 5 to exit the app")
     choice = input("Enter your choice:")
     return choice
+choice = ""
 
+while choice !="5":
+    choice = main_menu()
+    if choice == "1":
+        print("Choose your dice to roll")
+    elif choice =="2":
+        print ("Roll with Advantage or Disadvantage")
+    elif choice == "3":
+        print("Create your dice combination")
+    elif choice == "4":
+        print ("Showing your saved combinations:")
+    else:
+        print ("Invalid choice")
+print("Thank you for using the D&D Dice App")
