@@ -18,6 +18,12 @@ In D&D players will use dice rolls for a wide array of features but the main app
 
 ## Imports:
 
-Import black by creating a virtual environment (`python -m venv .venv python`), then use (`python  source .venv/bin/activate python`) to activate, then install using (`python pip install black python`), to create a list requirements use (`python pip freeze > requirements.txt python`). Black will be used to automatically format the files to the pep 8 style which is considered a standard of python
+Import black by creating a virtual environment in the terminal (-m venv .venv), then use (source .venv/bin/activate)to activate, then install using (pip install black), to create a list requirements use (pip freeze > requirements.txt). Black will be used to automatically format the files to the pep 8 style which is considered a standard of python
 
-Import random to use randint for random number generation. To import just type `python import random python` into the file you plan on using it. In this case it is the Die.py file.
+Import random to use randint for random number generation. To import just type
+
+```python
+import random
+```
+
+into the file you plan on using it. In this case it is the Die.py file.
