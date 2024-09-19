@@ -1,5 +1,6 @@
 # first going to set up the welcome to app message and import color module which will make terminal easier to read.
 from colored import Fore, Back, Style
+from Classes.Dice import roll_dice
 
 # from requirements.txt import black
 
@@ -18,11 +19,11 @@ def main_menu():
 
 
 choice = ""
-
 while choice != "5":
     choice = main_menu()
     if choice == "1":
-        print("Choose your dice to roll")
+        roll_dice()
+        print("Choose your dice and the number of dice you wish to roll")
     elif choice == "2":
         print("Roll with Advantage or Disadvantage")
     elif choice == "3":

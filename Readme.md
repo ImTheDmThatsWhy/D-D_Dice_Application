@@ -27,3 +27,5 @@ import random
 ```
 
 into the file you plan on using it. In this case it is the Die.py file.
+
+Import color: same way as the black import but substitute the word black for the word color.
