@@ -28,4 +28,4 @@ import random
 
 into the file you plan on using it. In this case it is the Die.py file.
 
-Import color: same way as the black import but substitute the word black for the word color.
+Import color: same way as the black import but substitute the word black for the word color. The colour module will be used to make the app more reader friendly in the terminal, by coloring outputs and headings.
