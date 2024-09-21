@@ -1,5 +1,7 @@
 import random
 #gives access to randint function to generate random numbers
+class NegativeError(Exception):
+    pass 
 class Dice:
     def __init__(self, value):
        self.value=value
@@ -15,12 +17,21 @@ def roll_dice():
             continue
         if len(n)>3:
             continue
-        dice=Dice(int(n[1]))
-        number=n[0]
-        result=[]
-        for i in range(int(number)):
-            result.append (dice.roll())
-        print(result)
-        return result
-       
-  
+        try: 
+            if n<0:
+                raise NegativeError("dice number cannot be a negative number")
+            dice=Dice(int(n[1]))
+            number=(int(n[0]))
+            result=[]
+            for i in range((number)):
+                result.append (dice.roll())
+            print(result)
+            return result
+        except ValueError:
+            print("Please input #d# note number input must be >0")
+            continue
+        except NegativeError as e:
+            print("dice number cannot be a negative number")
+        except Exception:
+            print("something went wrong please try again")
+    
