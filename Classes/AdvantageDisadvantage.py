@@ -1,4 +1,6 @@
 from Functions.Roll_Die_Function import advantage, disadvantage
+
+
 def advantage_disadvantage_menu():
     choice = ""
     while choice != "3":
@@ -6,7 +8,7 @@ def advantage_disadvantage_menu():
         print("Enter 2 to roll with disadvantage")
         print("Enter 3 to exit\n")
         choice = input("Enter your choice:\n")
-        if  choice == "1":
+        if choice == "1":
             print("Rolling with advantage")
             advantage()
         elif choice == "2":
