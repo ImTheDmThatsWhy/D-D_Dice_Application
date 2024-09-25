@@ -7,3 +7,9 @@ def name():
     n=input
 def combo():
     n=input
+
+saved_combinations = {}
+entries=int(input)
+for i in range(1, entries + 1):
+    name()
+    combo()
