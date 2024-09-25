@@ -42,7 +42,7 @@ def roll_dice():
             result = []
             for i in range((number)):
                 result.append(dice.roll())
-            if number>2:
+            if number > 2:
                 print(f"Sum of dice ={sum(result)}")
             print(result)
             return result
