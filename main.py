@@ -24,18 +24,18 @@ choice = ""
 while choice != "5":
     choice = main_menu()
     if choice == "1":
+        print(f"{Fore.red}{Back.black}Choose your dice and the number of dice you wish to roll{Style.reset}\n")
         roll_dice()
-        print("Choose your dice and the number of dice you wish to roll")
     elif choice == "2":
+        print(f"{Fore.red}{Back.black}Roll with Advantage or Disadvantage{Style.reset}\n")
         advantage_disadvantage_menu()
-        print("Roll with Advantage or Disadvantage")
     elif choice == "3":
         combo_and_save()
         print("Create your dice combination")
     elif choice == "4":
-        print("Showing your saved combinations:")
+        print(f"{Fore.red}{Back.black}Showing your saved combinations:{Style.reset}\n")
     elif choice == "5":
-        print("Exiting")
+        print(f"{Fore.red}{Back.black}Exiting{Style.reset}\n")
     else:
         print("Invalid choice")
-print("Thank you for using the D&D Dice App")
+print(f"{Fore.red}{Back.black}Thank you for using the D&D Dice App{Style.reset}\n")

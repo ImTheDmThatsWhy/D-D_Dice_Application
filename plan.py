@@ -6,11 +6,11 @@
 
 
 # while len(name)>0:
-            #       print("name accepted")
+#       print("name accepted")
 #   try:
 #         name=input
 #         while len(input)> 0:
-#             name=len(input>0)("Enter the name of the dice combo:\n") 
+#             name=len(input>0)("Enter the name of the dice combo:\n")
 #         if len(input)==0:
 #             raise NoInput("Input can't be nothing please enter a name")
 #     except NoInput as e:

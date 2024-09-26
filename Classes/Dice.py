@@ -1,4 +1,5 @@
 import random
+from colored import Fore, Style
 
 
 # gives access to randint function to generate random numbers
@@ -21,9 +22,7 @@ class Dice:
 def roll_dice():
     valid_dice = ["2", "4", "6", "8", "10", "12", "20", "100"]
     while True:
-        n = input(
-            "type the number and type of dice you want eg 2d2, type of dice:d2, d4, d6, d8, d10, d12, d20, and d100:\n"
-        )
+        n = input(f"{Fore.blue}Type the number and type of dice you want eg 2d2, type of dice:d2, d4, d6, d8, d10, d12, d20, and d100:{Style.reset}\n")
         n = n.split("d")
         if len(n) < 2:
             continue
@@ -43,8 +42,8 @@ def roll_dice():
             for i in range((number)):
                 result.append(dice.roll())
             if number > 2:
-                print(f"Sum of dice ={sum(result)}")
-            print(result)
+                print(f"Sum of dice = {Fore.blue}{sum(result)}{Style.reset}\n")
+            print(f"{Fore.blue}{(result)}{Style.reset}\n")
             return result
         except ValueError:
             print("Please input #d# note number input must be >0")
