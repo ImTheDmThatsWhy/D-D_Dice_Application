@@ -2,7 +2,8 @@
 from colored import Fore, Back, Style
 from Classes.Dice import roll_dice
 from Classes.AdvantageDisadvantage import advantage_disadvantage_menu
-from SavedDiceCombos.saving import save_and_exit, saved_combo
+from SavedDiceCombos.saving import combo_and_save
+
 # from requirements.txt import black
 
 print(f"{Fore.red}{Back.black}Welcome to the D&D Dice Application{Style.reset}\n")
@@ -29,8 +30,7 @@ while choice != "5":
         advantage_disadvantage_menu()
         print("Roll with Advantage or Disadvantage")
     elif choice == "3":
-        save_and_exit()
-        saved_combo()
+        combo_and_save()
         print("Create your dice combination")
     elif choice == "4":
         print("Showing your saved combinations:")

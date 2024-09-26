@@ -26,6 +26,41 @@ Import random to use randint for random number generation. To import just type
 import random
 ```
 
+To generate random numbers use the randint function for example:
+
+```python
+def roll_two_dice():
+    firstd20 = random.randint(1, 20)
+    secondd20 = random.randint(1, 20)
+    dice_list = [firstd20, secondd20]
+    dice_list.sort()
+    print(dice_list)
+    return dice_list
+```
+
 into the file you plan on using it. In this case it is the Die.py file.
 
-Import color: same way as the black import but substitute the word black for the word color. The colour module will be used to make the app more reader friendly in the terminal, by coloring outputs and headings.
+Import color: same way as the black import but substitute the word black for the word color. The colour module will be used to make the app more reader friendly in the terminal, by coloring outputs and headings. For example the code below colors the output of the highest or lowest roll depending on if a person is rolling with advantage or disadvantage.
+
+```python
+def advantage():
+    dice_list = roll_two_dice()
+    print("Highest D20 roll is:", f"{Fore.blue}{dice_list[1]}{Style.reset}\n")
+
+
+def disadvantage():
+    dice_list = roll_two_dice()
+    print("Lowest D20 roll is:", f"{Fore.red}{dice_list[0]}{Style.reset}\n")
+```
+
+The output of the code above looks like the following (20 is highlighted blue):
+
+```
+Enter your choice:
+1
+Rolling with advantage
+[17, 20]
+Highest D20 roll is: 20
+```
+
+##
