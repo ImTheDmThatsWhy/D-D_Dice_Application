@@ -44,6 +44,9 @@ def roll_dice():
             if number > 2:
                 print(f"Sum of dice = {Fore.blue}{sum(result)}{Style.reset}\n")
             print(f"{Fore.blue}{(result)}{Style.reset}\n")
+            roll_again=input("Roll again? Y/N:")
+            if roll_again=="Y":
+                continue
             return result
         except ValueError:
             print("Please input #d# note number input must be >0")
@@ -52,3 +55,4 @@ def roll_dice():
             print("dice number cannot be a negative number")
         except NonExistantDice as e:
             print("This dice does not exist in D&D pick a valid dice")
+    

@@ -4,26 +4,19 @@ import json
 class NoInput(Exception):
     pass
 
-
 def __init__(self, name, combo):
     self.name = name
     self.combo = combo
-
-
 def save_and_exit(saved_combinations):
     json_to_write = []
     json_to_write.append(saved_combinations)
     with open("SavedDiceCombos/saved_combinations.json", "w") as json_file:
         json.dump(json_to_write, json_file, indent=4)
-
-
 def saved_combo(saving):
     with open("SavedDiceCombos/saved_combinations.json", "r") as json_file:
         json_to_load = json.load(json_file)
         for combo in json_to_load:
             saving.update(combo)
-
-
 def combo_and_save():
     saved_combinations = {}
     saved_combo(saved_combinations)
