@@ -45,7 +45,7 @@ def roll_dice():
                 print(f"Sum of dice = {Fore.blue}{sum(result)}{Style.reset}\n")
             print(f"{Fore.blue}{(result)}{Style.reset}\n")
             roll_again=input("Roll again? Y/N:")
-            if roll_again=="Y":
+            if roll_again.upper()=="Y":
                 continue
             return result
         except ValueError:

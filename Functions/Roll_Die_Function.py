@@ -11,7 +11,7 @@ def roll(self):
 
 def repeat(function_to_repeat):
     roll_again=input("Roll again? Y/N:")
-    if roll_again=="Y":
+    if roll_again.upper()=="Y":
         function_to_repeat()
 def roll_two_dice():
     firstd20 = random.randint(1, 20)
@@ -24,9 +24,6 @@ def advantage():
     dice_list = roll_two_dice()
     print("Highest D20 roll is:", f"{Fore.blue}{dice_list[1]}{Style.reset}\n")
     repeat(advantage)
-    
-
-
 def disadvantage():
     dice_list = roll_two_dice()
     print("Lowest D20 roll is:", f"{Fore.red}{dice_list[0]}{Style.reset}\n")
