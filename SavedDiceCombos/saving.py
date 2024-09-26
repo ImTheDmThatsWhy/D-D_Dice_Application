@@ -20,14 +20,22 @@ def saved_combo(saving):
 def combo_and_save():
     saved_combinations = {}
     saved_combo(saved_combinations)
-    try: 
-        while True:
+    while True:
+        try: 
             name=input("Enter the name of your dice combo:\n")
             if not name:
                 raise NoInput("input cannot be left empty please provide a name")
-    except NoInput as e:
-        print("Name cannot be empty please give a name")
-    combo = input("Enter the dice combo:\n")
+            break
+        except NoInput as e:
+            print(e)
+    while True:
+        try:
+            combo = input("Enter the dice combo:\n")
+            if not combo:
+               raise NoInput("input cannot be left empty please provide a combo")
+            break
+        except NoInput as e:
+            print(e)
     saved_combinations[name] = combo
     print(saved_combinations)
     save_and_exit(saved_combinations)
