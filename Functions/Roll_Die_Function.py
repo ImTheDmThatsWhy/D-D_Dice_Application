@@ -1,18 +1,60 @@
 import random
 from colored import Fore, Style
+from Classes.Dice import Dice
+class NegativeError(Exception):
+    pass
 
 
-def __init__(self, value):
-    self.value = value
+class NonExistantDice(Exception):
+    pass
+class InappropriateInput(Exception):
+    pass
+def roll_dice():
+    valid_dice = ["2", "4", "6", "8", "10", "12", "20", "100"]
+    while True:
+        n = input(f"{Fore.blue}Type the number and type of dice you want eg 2d2, type of dice:d2, d4, d6, d8, d10, d12, d20, and d100:{Style.reset}\n")
+        n = n.split("d")
+        if len(n) < 2:
+            continue
+        if len(n) > 3:
+            continue
+        try:
+            dice = Dice(int(n[1]))
+            number = int(n[0])
 
-
-def roll(self):
-    return random.randint(1, self.value)
+            if number < 0:
+                raise NegativeError("dice number cannot be a negative number")
+            if valid_dice.count(n[1]) == 0:
+                raise NonExistantDice(
+                    "This dice does not exist in D&D pick a valid dice")
+            result = []
+            for i in range((number)):
+                result.append(dice.roll())
+            if number > 2:
+                print(f"Sum of dice = {Fore.blue}{sum(result)}{Style.reset}\n")
+            print(f"{Fore.blue}{(result)}{Style.reset}\n")
+            repeat(roll_dice)
+            break
+        except ValueError:
+            print("Please input #d# note number input must be >0")
+            continue
+        except NegativeError as e:
+            print("dice number cannot be a negative number")
+        except NonExistantDice as e:
+            print("This dice does not exist in D&D pick a valid dice")
 
 def repeat(function_to_repeat):
-    roll_again=input("Roll again? Y/N:")
-    if roll_again.upper()=="Y":
-        function_to_repeat()
+    while True:
+        try:
+            roll_again=input("Roll again? Y/N:")
+            if roll_again.upper()=="Y":
+                function_to_repeat()
+                break
+            if roll_again.upper()!="N":
+             raise InappropriateInput(f"{Fore.red}Please enter Y or N{Style.reset}\n")
+            break        
+        except InappropriateInput as e:
+            print(e)
 def roll_two_dice():
     firstd20 = random.randint(1, 20)
     secondd20 = random.randint(1, 20)
@@ -28,4 +70,5 @@ def disadvantage():
     dice_list = roll_two_dice()
     print("Lowest D20 roll is:", f"{Fore.red}{dice_list[0]}{Style.reset}\n")
     repeat(disadvantage)
+
   

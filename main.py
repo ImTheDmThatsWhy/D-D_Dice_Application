@@ -1,6 +1,6 @@
 # first going to set up the welcome to app message and import color module which will make terminal easier to read.
 from colored import Fore, Back, Style
-from Classes.Dice import roll_dice
+from Functions.Roll_Die_Function import roll_dice
 from Classes.AdvantageDisadvantage import advantage_disadvantage_menu
 from SavedDiceCombos.saving import combo_and_save
 
