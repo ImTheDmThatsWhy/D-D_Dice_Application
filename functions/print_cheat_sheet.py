@@ -15,7 +15,8 @@ def delete_items():
             if delete.upper() == "Y":
              saved_combinations = {}
              saved_combo(saved_combinations)
-             saved_combinations.pop(input("enter name of combo you with to delete: "))
+             combo=input("enter name of combo you with to delete: ")
+             saved_combinations.pop(combo)
              print(f"{Fore.blue}{saved_combinations}{Style.reset}\n")
              break
             if delete.upper() != "N":
@@ -24,5 +25,6 @@ def delete_items():
                 )
             break
         except InappropriateInput as e:
-            print(e)  
-       
+            print(e) 
+        except KeyError:
+            print(f"{Fore.red}Item name not in the list please try again{Style.reset}\n")
