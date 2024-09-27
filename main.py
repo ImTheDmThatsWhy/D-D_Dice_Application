@@ -3,7 +3,7 @@ from colored import Fore, Back, Style
 from functions.roll_dice_functions import roll_dice
 from functions.disadvantage_and_advantage_rolls import advantage_disadvantage_menu
 from saved.saving import combo_and_save
-from functions.print_cheat_sheet import print_sheet
+from functions.print_cheat_sheet import print_sheet, delete_items
 
 # from requirements.txt import black
 
@@ -40,6 +40,7 @@ while choice != "5":
     elif choice == "4":
         print(f"{Fore.red}{Back.black}Showing your saved combinations:{Style.reset}\n")
         print_sheet()
+        delete_items()
     elif choice == "5":
         print(f"{Fore.red}{Back.black}Exiting{Style.reset}\n")
     else:

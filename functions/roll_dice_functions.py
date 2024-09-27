@@ -1,22 +1,25 @@
 import random
 from colored import Fore, Style
 from classes.dice import Dice
-
-
-class NegativeError(Exception):
-    pass
-
-
-class NonExistantDice(Exception):
-    pass
-
-
-class InappropriateInput(Exception):
-    pass
-
-
+from functions.print_cheat_sheet import print_sheet
+from classes.exceptions import InappropriateInput, NegativeError,  NonExistantDice
+def cheatsheet():
+    while True:
+        try:
+            cheatsheet= input("Do you wish to view cheatsheet? Y/N:")
+            if cheatsheet.upper() == "Y":
+                print_sheet()
+                break
+            if cheatsheet.upper() != "N":
+                raise InappropriateInput(
+                    f"{Fore.red}Please enter Y or N{Style.reset}\n"
+                )
+            break
+        except InappropriateInput as e:
+            print(e)  
 def roll_dice():
     valid_dice = ["2", "4", "6", "8", "10", "12", "20", "100"]
+    cheatsheet()
     while True:
         n = input(
             f"{Fore.blue}Type the number and type of dice you want eg 2d2, type of dice:d2, d4, d6, d8, d10, d12, d20, and d100:{Style.reset}\n"
@@ -51,7 +54,6 @@ def roll_dice():
             print("dice number cannot be a negative number")
         except NonExistantDice as e:
             print("This dice does not exist in D&D pick a valid dice")
-
 
 def repeat(function_to_repeat):
     while True:
