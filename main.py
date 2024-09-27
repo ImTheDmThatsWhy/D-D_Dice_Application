@@ -1,8 +1,9 @@
 # first going to set up the welcome to app message and import color module which will make terminal easier to read.
 from colored import Fore, Back, Style
-from Functions.Roll_Die_Function import roll_dice
-from Classes.AdvantageDisadvantage import advantage_disadvantage_menu
-from SavedDiceCombos.saving import combo_and_save
+from functions.roll_dice_functions import roll_dice
+from functions.disadvantage_and_advantage_rolls import advantage_disadvantage_menu
+from saved.saving import combo_and_save
+from functions.print_cheat_sheet import print_sheet
 
 # from requirements.txt import black
 
@@ -24,16 +25,21 @@ choice = ""
 while choice != "5":
     choice = main_menu()
     if choice == "1":
-        print(f"{Fore.red}{Back.black}Choose your dice and the number of dice you wish to roll{Style.reset}\n")
+        print(
+            f"{Fore.red}{Back.black}Choose your dice and the number of dice you wish to roll{Style.reset}\n"
+        )
         roll_dice()
     elif choice == "2":
-        print(f"{Fore.red}{Back.black}Roll with Advantage or Disadvantage{Style.reset}\n")
+        print(
+            f"{Fore.red}{Back.black}Roll with Advantage or Disadvantage{Style.reset}\n"
+        )
         advantage_disadvantage_menu()
     elif choice == "3":
         combo_and_save()
         print("Create your dice combination")
     elif choice == "4":
         print(f"{Fore.red}{Back.black}Showing your saved combinations:{Style.reset}\n")
+        print_sheet()
     elif choice == "5":
         print(f"{Fore.red}{Back.black}Exiting{Style.reset}\n")
     else:
