@@ -11,8 +11,8 @@ print(f"{Fore.red}{Back.black}Welcome to the D&D Dice Application{Style.reset}\n
 def main_menu():
     print("Enter 1 to roll dice")
     print("Enter 2 to roll d20 with advantage or disadvantage")
-    print("Enter 3 to create a dice combination to save")
-    print("Enter 4 to view saved dice combinations")
+    print("Enter 3 to create a dice combination to save to create a cheatsheet")
+    print("Enter 4 to view saved dice combinations and edit dice combinations")
     print("Enter 5 to exit the app")
     choice = input("Enter your choice:")
     return choice

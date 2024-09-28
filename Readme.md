@@ -4,7 +4,7 @@ This dice app will allow players to easily roll D&D dice during a campaign.
 
 ## Background: What is D&D:
 
-For people unfamiliar with D&D, D&D stands for dungeons and dragons and is a fantasy table-top role playing game. In the game players form a party and embark on epic quests as they explore a world or worlds together.
+For people unfamiliar with D&D, D&D stands for Dungeons and Dragons and is a fantasy table-top role playing game. In the game players form a party and embark on epic quests as they explore a world or worlds together.
 
 ## What is the purpose of dice rolls?
 
@@ -20,7 +20,7 @@ In D&D players will use dice rolls for a wide array of features but the main app
 
 ### Black Module
 
-Import black by creating a virtual environment in the terminal (-m venv .venv), then use (source .venv/bin/activate)to activate, then install using (pip install black), to create a list requirements use (pip freeze > requirements.txt). Black will be used to automatically format the files to the pep 8 style which is considered a standard of python. To use the black module to edit the files type
+Import black by creating a virtual environment in the terminal (-m venv .venv), then use (source .venv/bin/activate) to activate, then install using (pip install black), to create a list requirements use (pip freeze > requirements.txt). Black will be used to automatically format the files to the pep 8 style which is considered a standard of python. To use the black module to edit the files type
 
 ```
 black .
@@ -49,6 +49,8 @@ def roll_two_dice():
 ```
 
 into the file you plan on using it. In this case it is the Die.py file.
+
+### Colored Module
 
 Import color: Like the black module, the color module needs to be installed in a virtual environment the same way as the black import, but with the word black substituted for the word color. The colour module will be used to make the app more reader friendly in the terminal, by coloring outputs and headings. For example the code below colors the output of the highest or lowest roll depending on if a person is rolling with advantage or disadvantage.
 
@@ -113,15 +115,104 @@ def combo_and_save():
     save_and_exit(saved_combinations)
 ```
 
+### Re module:
+
+The regular expressions module does not require a virtual environment or pip to be used and can simply be imported by writing
+
+```python
+import Re
+```
+
+into the file where the module is intended to be used. In this application it has been used to check that the specified regular expressions are in a string.
+
 ## Application Functions:
 
 ### Roll Dice
 
 In D&D there as previously mentioned there are specific dice that players roll depending on the situation the dice featured in D&D are the following:
-[D2, D4, D6, D8, D9, D10, D12, D20, and D100.]
+[d2, d4, d6, d8, d10, d12, d20, and d100.]
 The roll function allows the app user to select which D&D dice they need and how many they need to roll.
 The user also has the option to view a cheat sheet before they roll if they struggle to remember what rolls are needed for certain actions.
 
 ## Disadvantage and Advantage Rolls:
 
-In D&D there are often scenarios where a player will be required to roll with disadvantage (lowest roll of two d20) or advantage (highest roll of two d20). This function allows users to roll with advantage or disadvantage, perform rerolls and view there lowest or highest score in the terminal.
+In D&D there are often scenarios where a player will be required to roll with disadvantage (lowest roll of two d20) or advantage (highest roll of two d20). This function allows users to roll with advantage or disadvantage, perform rerolls, and view their lowest or highest score in the terminal.
+
+## Create dice combinations:
+
+In this menu option the user is prompted to name and create a dice combination that they can view before rolling later, in case they have forgotten the specifics of dice rolls required for certain attacks or skills.
+
+## View and edit saved dice combinations:
+
+Allows the user to view their saved combos and delete combos
+
+## Future functions
+
+In the future this app plans to implement the following:
+
+-   Allow users to use their saved combos to roll
+-   Create a dice table so that the user can roll a random item
+-   Add the users modifiers to a roll
+
+## Licensing and Dependancies:
+
+### MIT LICENSE:
+
+```
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+### Colored module:
+
+The colored module has the following relevant information:
+
+Author: Dimitris Zlantanidis
+
+Requirements: Python>=3.9 (requires version 3.9 or higher)
+
+License: Mit Approved license:
+
+In accordance with information found on open source intiative (https://opensource.org/license/mit), the Mit License means that permission is granted free of charge to any person who has a copy of the software. Furthermore, the software can be used without restriction and the user can use, copy, modify, merge, publish, distribute, and sell copies of the software unrestrictedly provided that the user also notes that aoftware in question (colored) is under the MIT license. As this is an open license there is no ethical concerns about the use of color is this application as I have acknowledged that colored is under the MIT license.
+
+Environment: Console
+
+Operating Systems:
+
+-   Microsoft Windows
+
+-   Microsoft Windows Windows 10
+
+-   OS Independent
+
+-   POSIX Linux
+
+-   POSIX Other
+
+### Black Module:
+
+The Black module has the following relevant information:
+
+Author: Łukasz Langa
+
+Requirements: Python>=3.8 (requires version 3.8 or higher)
+
+License: Mit Approved license: No concerns in terms of ethics (see the mit license information in colored for more information)
+
+Environment: Console
+
+Operating System: Os independant it works on any operating system.
+
+### Module already in python (Re, JSON, Random):
+
+As these module are a part of python 3 the assumption is being made that they follow the license for python.
+
+License for python PSF:
+According to https://docs.python.org/3/license.html there are no ethical concerns because python software is not bundled with this appication. Therefore, there has been no breach to the terms of the license.
+
+### Dependecies:
+
+For black and color modules all additional dependencies required can be found in the requirements.txt file of this application.

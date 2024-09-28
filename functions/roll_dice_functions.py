@@ -2,12 +2,13 @@ import random
 from colored import Fore, Style
 from classes.dice import Dice
 from functions.print_cheat_sheet import print_sheet
-from classes.exceptions import InappropriateInput, NegativeError,  NonExistantDice
+from classes.exceptions import InappropriateInput, NegativeError, NonExistantDice
+
 
 def cheatsheet():
     while True:
         try:
-            cheatsheet= input("Do you wish to view cheatsheet? Y/N:")
+            cheatsheet = input("Do you wish to view cheatsheet? Y/N:")
             if cheatsheet.upper() == "Y":
                 print_sheet()
                 break
@@ -17,7 +18,8 @@ def cheatsheet():
                 )
             break
         except InappropriateInput as e:
-            print(e)  
+            print(e)
+
 
 def roll_dice():
     valid_dice = ["2", "4", "6", "8", "10", "12", "20", "100"]
@@ -35,7 +37,9 @@ def roll_dice():
             dice = Dice(int(n[1]))
             number = int(n[0])
             if number < 0:
-                raise NegativeError(f"{Fore.red}dice number cannot be a negative number{Style.reset}\n")
+                raise NegativeError(
+                    f"{Fore.red}dice number cannot be a negative number{Style.reset}\n"
+                )
             if valid_dice.count(n[1]) == 0:
                 raise NonExistantDice(
                     f"{Fore.red}This dice does not exist in D&D pick a valid dice{Style.reset}\n"
@@ -49,12 +53,15 @@ def roll_dice():
             repeat(roll_dice)
             break
         except ValueError:
-            print(f"{Fore.red}Please input #d# note number input must be >0{Style.reset}\n")
+            print(
+                f"{Fore.red}Please input #d# note number input must be >0{Style.reset}\n"
+            )
             continue
         except NegativeError as e:
             print(e)
         except NonExistantDice as e:
             print(e)
+
 
 def repeat(function_to_repeat):
     while True:
@@ -71,6 +78,7 @@ def repeat(function_to_repeat):
         except InappropriateInput as e:
             print(e)
 
+
 def roll_two_dice():
     firstd20 = random.randint(1, 20)
     secondd20 = random.randint(1, 20)
@@ -79,10 +87,12 @@ def roll_two_dice():
     print(dice_list)
     return dice_list
 
+
 def advantage():
     dice_list = roll_two_dice()
     print("Highest D20 roll is:", f"{Fore.blue}{dice_list[1]}{Style.reset}\n")
     repeat(advantage)
+
 
 def disadvantage():
     dice_list = roll_two_dice()
