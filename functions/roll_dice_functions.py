@@ -48,12 +48,12 @@ def roll_dice():
             repeat(roll_dice)
             break
         except ValueError:
-            print("Please input #d# note number input must be >0")
+            print(f"{Fore.red}Please input #d# note number input must be >0{Style.reset}\n")
             continue
         except NegativeError as e:
-            print("dice number cannot be a negative number")
+            print(f"{Fore.red}dice number cannot be a negative number{Style.reset}\n")
         except NonExistantDice as e:
-            print("This dice does not exist in D&D pick a valid dice")
+            print(f"{Fore.red}This dice does not exist in D&D pick a valid dice{Style.reset}\n")
 
 def repeat(function_to_repeat):
     while True:
