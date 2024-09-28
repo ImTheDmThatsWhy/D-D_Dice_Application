@@ -40,5 +40,5 @@ while choice != "5":
     elif choice == "5":
         print(f"{Fore.red}{Back.black}Exiting{Style.reset}\n")
     else:
-        print("Invalid choice")
+        print(f"{Fore.red}Invalid choice{Style.reset}\n")
 print(f"{Fore.red}{Back.black}Thank you for using the D&D Dice App{Style.reset}\n")

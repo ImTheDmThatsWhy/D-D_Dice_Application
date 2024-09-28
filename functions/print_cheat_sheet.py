@@ -1,4 +1,4 @@
-from saved.saving import saved_combo
+from saved.saving import saved_combo, save_and_exit
 from colored import Fore, Style
 from classes.exceptions import InappropriateInput
 
@@ -36,6 +36,7 @@ def delete_items():
                 combo = input("enter name of combo you with to delete: ")
                 saved_combinations.pop(combo)
                 print(f"{Fore.blue}{saved_combinations}{Style.reset}\n")
+                save_and_exit(saved_combinations)
                 break
             if delete.upper() != "N":
                 raise InappropriateInput(

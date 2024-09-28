@@ -120,3 +120,8 @@ def combo_and_save():
 In D&D there as previously mentioned there are specific dice that players roll depending on the situation the dice featured in D&D are the following:
 [D2, D4, D6, D8, D9, D10, D12, D20, and D100.]
 The roll function allows the app user to select which D&D dice they need and how many they need to roll.
+The user also has the option to view a cheat sheet before they roll if they struggle to remember what rolls are needed for certain actions.
+
+## Disadvantage and Advantage Rolls:
+
+In D&D there are often scenarios where a player will be required to roll with disadvantage (lowest roll of two d20) or advantage (highest roll of two d20). This function allows users to roll with advantage or disadvantage, perform rerolls and view there lowest or highest score in the terminal.

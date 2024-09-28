@@ -1,4 +1,5 @@
 from functions.roll_dice_functions import advantage, disadvantage
+from colored import Fore, Style
 
 
 def advantage_disadvantage_menu():
@@ -17,4 +18,4 @@ def advantage_disadvantage_menu():
         elif choice == "3":
             print("exit")
         else:
-            print("invalid choice")
+            print(f"{Fore.red}invalid choice{Style.reset}\n")
