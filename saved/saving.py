@@ -39,7 +39,7 @@ def combo_and_save():
             print(e)
     while True:
         combo = input(
-            "Enter the dice combo (valid dice are: d2, d4, d6, d8, d10, d12, d20, d100):\n"
+            "Enter the dice combo (valid dice are: d2, d4, d6, d8, d10, d12, d20, and d100):\n"
         )
         correct_combo = re.search("^[1-9]+[0-9]*d([2468]|10|12|20|100)$", combo)
         if correct_combo:

@@ -1,7 +1,6 @@
 [
     {
-        "myDice": "1d4",
-        "myDice2": "1d10",
-        "sneak": "3d6"
+        "sneak": "3d6",
+        "fireball": "6d8"
     }
 ]
