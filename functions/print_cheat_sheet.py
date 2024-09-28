@@ -3,10 +3,27 @@ from colored import Fore, Style
 from classes.exceptions import InappropriateInput
 
 
+def print_sheet_delete():
+    saved_combinations = {}
+    saved_combo(saved_combinations)
+    if saved_combinations == {}:
+        print(
+            f"{Fore.red}Dictionary is empty please got to main menu option 3 to create input{Style.reset}\n"
+        )
+    else:
+        print(f"{Fore.green}{saved_combinations}{Style.reset}\n")
+        delete_items()
+
+
 def print_sheet():
     saved_combinations = {}
     saved_combo(saved_combinations)
-    print(f"{Fore.green}{saved_combinations}{Style.reset}\n")
+    if saved_combinations == {}:
+        print(
+            f"{Fore.red}Dictionary is empty please got to main menu option 3 to create input{Style.reset}\n"
+        )
+    else:
+        print(f"{Fore.green}{saved_combinations}{Style.reset}\n")
 
 
 def delete_items():

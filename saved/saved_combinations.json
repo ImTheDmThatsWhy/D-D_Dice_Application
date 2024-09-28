@@ -1,11 +1,1 @@
-[
-    {
-        "fireball": "6d8",
-        "sneak": "3d6",
-        "Thunder bolt": "8d8",
-        "length": "3d6",
-        "king": "8d6",
-        "Michael": "20D12",
-        "grape": "4d6"
-    }
-]
+[{ "sneak": "3d6" }]

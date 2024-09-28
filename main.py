@@ -3,12 +3,9 @@ from colored import Fore, Back, Style
 from functions.roll_dice_functions import roll_dice
 from functions.disadvantage_and_advantage_rolls import advantage_disadvantage_menu
 from saved.saving import combo_and_save
-from functions.print_cheat_sheet import print_sheet, delete_items
-
-# from requirements.txt import black
+from functions.print_cheat_sheet import print_sheet_delete
 
 print(f"{Fore.red}{Back.black}Welcome to the D&D Dice Application{Style.reset}\n")
-# next step is to create a menu for the user to use.
 
 
 def main_menu():
@@ -39,8 +36,7 @@ while choice != "5":
         print("Create your dice combination")
     elif choice == "4":
         print(f"{Fore.red}{Back.black}Showing your saved combinations:{Style.reset}\n")
-        print_sheet()
-        delete_items()
+        print_sheet_delete()
     elif choice == "5":
         print(f"{Fore.red}{Back.black}Exiting{Style.reset}\n")
     else:

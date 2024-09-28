@@ -8,3 +8,7 @@ class NonExistantDice(Exception):
 
 class InappropriateInput(Exception):
     pass
+
+
+class NoInput(Exception):
+    pass
