@@ -1,6 +1,7 @@
 from functions.roll_dice_functions import advantage, disadvantage
 from colored import Fore, Style
 
+
 def advantage_disadvantage_menu():
     choice = ""
     while choice != "3":

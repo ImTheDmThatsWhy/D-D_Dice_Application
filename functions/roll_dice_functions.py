@@ -4,6 +4,7 @@ from classes.dice import Dice
 from functions.print_cheat_sheet import print_sheet
 from classes.exceptions import InappropriateInput, NegativeError, NonExistantDice
 
+
 def cheatsheet():
     while True:
         try:
