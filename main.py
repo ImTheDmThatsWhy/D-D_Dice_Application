@@ -13,7 +13,7 @@ def main_menu():
     print("Enter 2 to roll d20 with advantage or disadvantage")
     print("Enter 3 to create a dice combination to save to create a cheatsheet")
     print("Enter 4 to view saved dice combinations and edit dice combinations")
-    print("Enter 5 to exit the app")
+    print("Enter 5 to exit")
     choice = input("Enter your choice:")
     return choice
 
