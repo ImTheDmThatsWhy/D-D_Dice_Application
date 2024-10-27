@@ -20,6 +20,12 @@ def cheatsheet():
         except InappropriateInput as e:
             print(e)
 
+def add_modifier():
+    while True:
+            add_modifier=input("do you wish to add modifier? Y/N")
+            if add_modifier.upper() == "Y":
+                print("Enter your modifier")
+                break
 
 def roll_dice():
     valid_dice = ["2", "4", "6", "8", "10", "12", "20", "100"]
@@ -28,6 +34,7 @@ def roll_dice():
         n = input(
             f"{Fore.blue}Type the number and type of dice you want eg 2d2, type of dice:d2, d4, d6, d8, d10, d12, d20, and d100:{Style.reset}\n"
         )
+        add_modifier()
         n = n.split("d")
         if len(n) < 2:
             continue
