@@ -1,0 +1,7 @@
+Feedback is given by Michael (a software developer) that pseudocode explanations should always be above the code being explained not below.
+1/12/2024 11:45am
+
+Action taken (Pseudocode moved to be on top of the code it is referencing instead of below)
+
+Feedback is given on pseudocode by Ben that formatting in terms of readability needs to be improved and grammar needs to be checked
+1\12\2024 12pm
