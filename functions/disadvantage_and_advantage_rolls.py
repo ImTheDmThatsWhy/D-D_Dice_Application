@@ -1,6 +1,7 @@
 from functions.roll_dice_functions import advantage, disadvantage
 from colored import Fore, Style
 
+
 # This function is a menu option that is a main menu in the app that gives the user the choice to roll with advantage, disadvantage or exit. If a user selects advantage or disadvantage, then the respective functions are called.
 def advantage_disadvantage_menu():
     choice = ""

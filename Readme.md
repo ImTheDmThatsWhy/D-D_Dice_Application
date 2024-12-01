@@ -1,3 +1,19 @@
+# Set Up
+
+To run the app in VS code please note that if opening in Vs code then Ubuntu 22-.04 (WSL) must be installed
+Using VS code:
+To set up and run this application a user needs to perform the following steps
+-Have python3 installed
+(for windows use the instructions from the following website https://learn.microsoft.com/en-us/windows/python/beginners)
+
+-   Next clone the code from Github by going to the link below https://github.com/ImTheDmThatsWhy/D-D_Dice_Application and click on the code button and click copy code, then in VS code click on the search bar at the top and type >Git:Clone (or go to show and run commands and search for Git:Clone and click on it) then paste the copied code into the search bar it will then prompt you to save the cloned repository to a folder
+
+-   After you have saved the repository open the folder in VS code by clicking on file open folder,
+
+-   After you have opened the folder, open up a terminal by clicking on terminal then new terminal and open up to the Ubuntu 22.04 (WSL),
+
+-   Once the terminal is open type python3 main.py to run the app.
+
 # Introduction
 
 This dice app will allow players to easily roll D&D dice during a campaign.

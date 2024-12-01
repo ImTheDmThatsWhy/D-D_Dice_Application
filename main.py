@@ -8,6 +8,7 @@ from functions.print_cheat_sheet import print_sheet_delete
 print(f"{Fore.red}{Back.black}Welcome to the D&D Dice Application{Style.reset}\n")
 
 
+# function creates main menu interface that prints the options listed below, then prompts the user to input their preferred options and returns the inputted choice. If a user inputs an incorrect choice then the user gets an invalid choice message.
 def main_menu():
     print("Enter 1 to roll dice")
     print("Enter 2 to roll d20 with advantage or disadvantage")
