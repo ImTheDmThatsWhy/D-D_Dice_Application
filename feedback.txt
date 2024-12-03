@@ -5,3 +5,7 @@ Action taken (Pseudocode moved to be on top of the code it is referencing instea
 
 Feedback is given on pseudocode by Ben that formatting in terms of readability needs to be improved and grammar needs to be checked
 1\12\2024 12pm
+
+Feedback given by Brendon that more information is required in the pseudocode on how imported packages are used (2/12/2024)
+
+Action taken information has been added into the pseudocode on how the imported packages have been used throughout the code.

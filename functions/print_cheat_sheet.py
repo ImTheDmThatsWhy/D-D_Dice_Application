@@ -1,4 +1,6 @@
 from saved.saving import saved_combo, save_and_exit
+
+# The colored module has been imported so that the error message can be colored red the fore colours the text and Style.reset normalizes the text.
 from colored import Fore, Style
 from classes.exceptions import InappropriateInput
 
@@ -28,7 +30,7 @@ def print_sheet():
         print(f"{Fore.green}{saved_combinations}{Style.reset}\n")
 
 
-# This function deletes items from the existing dictionary, the user is offered the option to delete items and if they select Y for yes then they will be asked to enter the name of the combo they wish to delete. The code is wrapped in a try block so if the user makes an incorrect input an exception is raised. In this function exceptions are raised if a person fails to input a Y or an N when asked, or of they try to select a combo to delete that does not exist in the dictionary.
+# This function deletes items from the existing dictionary, the user is offered the option to delete items and if they select Y for yes then they will be asked to enter the name of the combo they wish to delete. The code is wrapped in a try block so if the user makes an incorrect input an exception is raised. The InnappropriateInput has been imported from Classes.exceptions this function is raised if a person fails to input a Y or an N when asked, or of they try to select a combo to delete that does not exist in the dictionary.
 def delete_items():
     while True:
         try:
@@ -42,12 +44,14 @@ def delete_items():
                 save_and_exit(saved_combinations)
                 break
             if delete.upper() != "N":
+                # The InnapropriateInput class has been imported from Classes.excception and raises an error if the user puts in an inncorrect input.
                 raise InappropriateInput(
                     f"{Fore.red}Please enter Y or N{Style.reset}\n"
                 )
             break
         except InappropriateInput as e:
             print(e)
+        # The KeyError is a builtin python class that raises an error when the input does not match a key in the dictionary, raising an exception that prompts the user to try again.
         except KeyError:
             print(
                 f"{Fore.red}Item name not in the list please try again{Style.reset}\n"

@@ -1,4 +1,7 @@
+# advantage, and disadvantage functions have been imported so that when the user inputs the option to roll with advanatge or disadvantage the relevant function will execute.
 from functions.roll_dice_functions import advantage, disadvantage
+
+# The colored module has been imported so that the error message in the advantage and disadvantage menu can be color coded red. The fore import stylizes the text while style.reset normalizes the text
 from colored import Fore, Style
 
 

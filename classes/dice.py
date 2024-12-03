@@ -1,3 +1,4 @@
+# The random module has been imported so that a random number be returned in the dice class from the range of the given input for example if the input is 6, then the random.randomint will return a random interger between 1-6.
 import random
 
 

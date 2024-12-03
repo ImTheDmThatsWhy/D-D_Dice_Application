@@ -1,11 +1,14 @@
+# The random module has been imported so that a random number be returned in the dice class from the range of the given input for example if the input is 6, then the random.randomint will return a random interger between 1-6.
 import random
+
+# The colored module has been imported so that error messages can be colored red the fore colours the text and Style.reset normalizes the text.It is also used for the advantage function to color the highest dice roll blue, and in the disadvanatge function the color red
 from colored import Fore, Style
 from classes.dice import Dice
 from functions.print_cheat_sheet import print_sheet
 from classes.exceptions import InappropriateInput, NegativeError, NonExistantDice
 
 
-# the cheatsheet function is a function that appears when the user is about to roll a dice that allows the user to view a cheatsheet if they wish. The user is asked to input a Y for yes or N for no. If the user selects yes then the cheat sheet is printed and the loop breaks. The code is wrapped in a try block so that if the user incorrectly inputs something other then Y or N then an innapropriate input error is raised.
+# the cheatsheet function is a function that appears when the user is about to roll a dice that allows the user to view a cheatsheet if they wish. The user is asked to input a Y for yes or N for no. If the user selects yes then the cheat sheet is printed and the loop breaks. The code is wrapped in a try block so that if the user incorrectly inputs something other then Y or N then an innapropriate input error is raised.The InnapropriateInput class has been imported from Classes.excceptions.
 def cheatsheet():
     while True:
         try:
@@ -51,16 +54,17 @@ def roll_dice():
             continue
 
         try:
-            # calls the dice function and turns the input (number of faces on the die/dice based on input)into an interger
+            # calls the dice class that has been imported from classes.dice and turns the input (number of faces on the die/dice based on input)into an interger.
             dice = Dice(int(n[1]))
             # turns the number of dice rolls (based on input) into an interger
             number = int(n[0])
             if number < 0:
+                # Negative error is a class that has been imported from Classes.exceptions and raises an exception if the user inputs a negative value.
                 raise NegativeError(
                     f"{Fore.red}dice number cannot be a negative number{Style.reset}\n"
                 )
 
-            # if the input is not not equal to the valid input in the valid dice list then an error is raised and the user is asked to input a valid dice roll
+            # NonExistantDice is a class that has been imported from Classes.exceptions that raises an exception if the input is not not equal to the valid input in the valid dice list.
             if valid_dice.count(n[1]) == 0:
                 raise NonExistantDice(
                     f"{Fore.red}This dice does not exist in D&D pick a valid dice{Style.reset}\n"
@@ -82,6 +86,7 @@ def roll_dice():
             break
 
         # the code below raises an error if the incorrect value has been input and prompts the user to input the correct code
+        # ValueError is a built in class that raises an exception if the inncorrect value is entered.
         except ValueError:
             print(
                 f"{Fore.red}Please input #d# note number input must be >0{Style.reset}\n"

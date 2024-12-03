@@ -1,8 +1,16 @@
 # first going to set up the welcome to app message and import color module which will make terminal easier to read.
 from colored import Fore, Back, Style
+
+# imported the roll_dice function so that when a person input option 1 in the menu the roll_dice function will activate.
 from functions.roll_dice_functions import roll_dice
+
+# the advantage_disadvantage_menu has been imported so that when a user inputs option 2 the menu function activates.
 from functions.disadvantage_and_advantage_rolls import advantage_disadvantage_menu
+
+# the combo_and_save function has been imported so that when a person selects option 3 the function executes and they can create a new combo to save to the cheatsheet.
 from saved.saving import combo_and_save
+
+# the print_sheet_delete function has been imported so that when a person selects option 4 the function executes and they can view the cheat sheet then decide it they want to delete a saved entry.
 from functions.print_cheat_sheet import print_sheet_delete
 
 print(f"{Fore.red}{Back.black}Welcome to the D&D Dice Application{Style.reset}\n")

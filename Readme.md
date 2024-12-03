@@ -1,6 +1,11 @@
 # Set Up
 
-To run the app in VS code please note that if opening in Vs code then Ubuntu 22-.04 (WSL) must be installed
+Dependecies note: To run the app in VS code a PC with windows 10 or 11 is required.
+To run the app in VS code please note that if opening in Vs code then Ubuntu 22-.04 (WSL) must be installed to install this on a windows device go to the microsoft store and download the Ubuntu 22.04.5 LTS app.
+Then install windows terminal from the microsoft app store. Then follow the instructions in the link below https://learn.microsoft.com/en-us/windows/wsl/install.
+
+-   Once downloaded go to VS code and use the instructions from the link below to run WSL in VS code https://learn.microsoft.com/en-us/windows/wsl/install,
+
 Using VS code:
 To set up and run this application a user needs to perform the following steps
 -Have python3 installed
@@ -16,7 +21,7 @@ To set up and run this application a user needs to perform the following steps
 
 # Introduction
 
-This dice app will allow players to easily roll D&D dice during a campaign.
+This dice app will allow players to easily roll D&D dice during a campaign. In D&D players are required to roll different dices in different situations including combat checks, skill checks, saving throws, and intiative rolls. The app allows players to roll many dice and different dice types, perform dice rolls with advantage or disadvantage (in D&D players may find themselves in situations where they either have an advantage or disadvanatge so when they wish to make a check they roll 2d20 where the higher they roll the more likely they are to succeed, if they have disadvanatge the lower roll is taken if they have advantage the higher roll is taken.), and create a cheatsheet that they can view combos before they roll saving them from taking up time recalling dice combos and rolls. Rolling dice is a core part of D&D and this app offers and easy and efficient alternative virtual dice roller for players to use.
 
 ## Background: What is D&D:
 
@@ -143,6 +148,10 @@ into the file where the module is intended to be used. In this application it ha
 
 ## Application Functions:
 
+## main menu:
+
+The main menu function is the main user interface of the D&D dice roller app, and allows the user to choose what they wish to do including: rolling dice, rolling with advantage and disadvantage, create and save dice combos, view a cheat sheet, and delete combos from the cheat sheet.
+
 ### Roll Dice
 
 In D&D there as previously mentioned there are specific dice that players roll depending on the situation the dice featured in D&D are the following:
@@ -161,14 +170,6 @@ In this menu option the user is prompted to name and create a dice combination t
 ## View and edit saved dice combinations:
 
 Allows the user to view their saved combos and delete combos
-
-## Future functions
-
-In the future this app plans to implement the following:
-
--   Allow users to use their saved combos to roll
--   Create a dice table so that the user can roll a random item
--   Add the users modifiers to a roll
 
 ## Licensing and Dependancies:
 
