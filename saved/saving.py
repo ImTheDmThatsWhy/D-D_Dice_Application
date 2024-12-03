@@ -3,6 +3,8 @@ import re
 from colored import Fore, Style
 from classes.exceptions import NoInput
 
+#The JSON class is a built-in python class that has been imported so that dice combos can be saved and loaded from a JSON file
+#Regular expressions (re) is a built-in python class that has been imported so that a search pattern could be established for the appropriate inputs when creating a dice combo
 
 # def __init__(self, name, combo):
 #     self.name = name
@@ -44,7 +46,7 @@ def combo_and_save():
         combo = input(
             "Enter the dice combo (valid dice are: d2, d4, d6, d8, d10, d12, d20, and d100):\n"
         )
-        # this code insures that the dice combination is correct by only allowing specified numbers of 2,4,68,10,12,20 and 100 in the format of #d#
+        # this code insures that the dice combination is correct by only allowing specified numbers of 2,4,6,8,10,12,20 and 100 in the format of #d#
         correct_combo = re.search("^[1-9]+[0-9]*d([2468]|10|12|20|100)$", combo)
         if correct_combo:
             print(f"{Fore.blue}dice combo accepted{Style.reset}\n")
