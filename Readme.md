@@ -21,15 +21,21 @@ To set up and run this application a user needs to perform the following steps
 
 # Introduction
 
-This dice app will allow players to easily roll D&D dice during a campaign. In D&D players are required to roll different dices in different situations including combat checks, skill checks, saving throws, and intiative rolls. The app allows players to roll many dice and different dice types, perform dice rolls with advantage or disadvantage (in D&D players may find themselves in situations where they either have an advantage or disadvanatge so when they wish to make a check they roll 2d20 where the higher they roll the more likely they are to succeed, if they have disadvanatge the lower roll is taken if they have advantage the higher roll is taken.), and create a cheatsheet that they can view combos before they roll saving them from taking up time recalling dice combos and rolls. Rolling dice is a core part of D&D and this app offers and easy and efficient alternative virtual dice roller for players to use.
+This dice app will allow players to easily roll dice for their tabletop role play game. In a tabletop role play game, players roll dice to determine the likelihood of success for their character’s actions. The app allows players to roll many dice and different dice types, perform dice rolls with special types of modifiers and create a cheat sheet for their go-to rolls. Rolling dice is a core part of any tabletop RPG experience like D&D and this app offers an easy and efficient alternative virtual dice roller for players to use.
+
+What is a Tabletop Role Play Game?
+In a table top role play game, a group of players immerse themselves in a world of fantasy and roleplay an adventure together. To determine the likelihood of the actions their characters take, they make dice rolls against required totals in the games’ rules.
+
+What is Advantage and Disadvantage?
+Advantage and Disadvantage are special dice rolls used for when a situation is either incredibly favourable or unfavourable towards the character, allowing them for that specific roll to roll their dice twice. For the roll players roll two 20 sided dice (2d20), if they have advantage, they roll twice and take the highest. If they have disadvantage, they roll twice and take the lowest.
 
 ## Background: What is D&D:
 
-For people unfamiliar with D&D, D&D stands for Dungeons and Dragons and is a fantasy table-top role playing game. In the game players form a party and embark on epic quests as they explore a world or worlds together.
+For people unfamiliar with campaigns like D&D, D&D stands for Dungeons and Dragons and is a fantasy table-top role playing game. In the game players form a party and embark on epic quests as they explore a world or worlds together.
 
 ## What is the purpose of dice rolls?
 
-In D&D players will use dice rolls for a wide array of features but the main applications can be boiled down to the following:
+In tabletop campaigns like D&D players will use dice rolls for a wide array of features but the main applications can be boiled down to the following:
 
 -Attack rolls (do you succesfully hit a target?)
 
@@ -98,7 +104,7 @@ Highest D20 roll is: 20
 
 ### Json Module:
 
-The json module has been imported to allow for the user of the app to create a cheat sheet by saving the name and combo of specialised D&D rolls. The json module does not require the creation of a virtual environment or pip install for use, and can be used by writing import json at the top of the file where the coder wants to create a function that saves files.
+The json module has been imported to allow for the user of the app to create a cheat sheet by saving the name and combo of specialised dice rolls. The json module does not require the creation of a virtual environment or pip install for use, and can be used by writing import json at the top of the file where the coder wants to create a function that saves files.
 
 ```python
 import json
@@ -150,18 +156,18 @@ into the file where the module is intended to be used. In this application it ha
 
 ## main menu:
 
-The main menu function is the main user interface of the D&D dice roller app, and allows the user to choose what they wish to do including: rolling dice, rolling with advantage and disadvantage, create and save dice combos, view a cheat sheet, and delete combos from the cheat sheet.
+The main menu function is the main user interface of the Tabletop RPG Dice Roller app, and allows the user to choose what they wish to do including: rolling dice, rolling with advantage and disadvantage, create and save dice combos, view a cheat sheet, and delete combos from the cheat sheet.
 
 ### Roll Dice
 
-In D&D there as previously mentioned there are specific dice that players roll depending on the situation the dice featured in D&D are the following:
+In Tabletop RPG's like D&D there as previously mentioned there are specific dice that players roll depending on the situation the dice which are the following:
 [d2, d4, d6, d8, d10, d12, d20, and d100.]
-The roll function allows the app user to select which D&D dice they need and how many they need to roll.
+The roll function allows the app user to select which dice they need and how many they need to roll.
 The user also has the option to view a cheat sheet before they roll if they struggle to remember what rolls are needed for certain actions.
 
 ## Disadvantage and Advantage Rolls:
 
-In D&D there are often scenarios where a player will be required to roll with disadvantage (lowest roll of two d20) or advantage (highest roll of two d20). This function allows users to roll with advantage or disadvantage, perform rerolls, and view their lowest or highest score in the terminal.
+In Tabletop RPG's like D&D there are often scenarios where a player will be required to roll with disadvantage (lowest roll of two d20) or advantage (highest roll of two d20). This function allows users to roll with advantage or disadvantage, perform rerolls, and view their lowest or highest score in the terminal.
 
 ## Create dice combinations:
 

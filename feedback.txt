@@ -9,3 +9,5 @@ Feedback is given on pseudocode by Ben that formatting in terms of readability n
 Feedback given by Brendon A that more information is required in the pseudocode on how imported packages are used (2/12/2024), and more information was required in the introduction about what D&D was.
 
 Action taken: information has been added into the pseudocode on how the imported packages have been used throughout the code. To expand on the introduction further information on D&D and the mechanics of dice rolling has been added.
+
+Feedback 3/12/2024 Evan, Brendon on their terminal apps mainly and ethical concerns

@@ -1,11 +1,22 @@
-# advantage, and disadvantage functions have been imported so that when the user inputs the option to roll with advanatge or disadvantage the relevant function will execute.
+# advantage, and disadvantage functions have been imported so that when users choose to roll with advanatge or disadvantage the relevant function will execute as shown in the following code:
+# if choice == "1":
+#   print("Rolling with advantage")
+#   advantage()
+
 from functions.roll_dice_functions import advantage, disadvantage
 
-# The colored module has been imported so that the error message in the advantage and disadvantage menu can be color coded red. The fore import stylizes the text while style.reset normalizes the text
+# The colored module has been imported so that the error message in the advantage and disadvantage menu
+# can be color coded red as shown in the following code:
+# print(f"{Fore.red}invalid choice{Style.reset}\n").
+# The fore import stylizes the text while style.reset normalizes the text
 from colored import Fore, Style
 
 
-# This function is a menu option that is a main menu in the app that gives the user the choice to roll with advantage, disadvantage or exit. If a user selects advantage or disadvantage, then the respective functions are called.
+# This function is a menu that gives users the choice to roll with advantage, disadvanatge or exit by prompting users to input a choice using choice = "" and offers different choices in the form of elif conditons like the example below:
+# if choice == "1":
+#             print("Rolling with advantage")
+#             advantage()
+# elif choice == "2":
 def advantage_disadvantage_menu():
     choice = ""
     while choice != "3":

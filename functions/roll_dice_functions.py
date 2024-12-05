@@ -1,14 +1,48 @@
-# The random module has been imported so that a random number be returned in the dice class from the range of the given input for example if the input is 6, then the random.randomint will return a random interger between 1-6.
+# Random is a built in python class that has been imported so that a random
+# number can be returned in the dice class from the range of the given input, as
+# shown in the code below:
+# def roll_two_dice():
+# firstd20 = random.randint(1, 20)
+
 import random
 
-# The colored module has been imported so that error messages can be colored red the fore colours the text and Style.reset normalizes the text.It is also used for the advantage function to color the highest dice roll blue, and in the disadvanatge function the color red
+# The colored module has been imported so that the error message can be colored red as demonstrated in the following code:
+# raise InappropriateInput(f"{Fore.red}Please enter Y or N{Style.reset}\n"
+# The colored module has also been used to color other messages as blue as shown in the code below from the roll dice function:
+# n = input(
+# f"{Fore.blue}Type the number and type of dice you want eg 2d2, type of dice:d2, d4, d6, d8, d10, d12, d20, and d100:{Style.reset}\n"
+# The fore import stylizes the text while style.reset normalizes the text
+# The colored module has been used in all functions listed below except roll_two_dice in the same manner as the code
+# example above for errors, messages, or results.
 from colored import Fore, Style
 from classes.dice import Dice
 from functions.print_cheat_sheet import print_sheet
 from classes.exceptions import InappropriateInput, NegativeError, NonExistantDice
 
 
-# the cheatsheet function is a function that appears when the user is about to roll a dice that allows the user to view a cheatsheet if they wish. The user is asked to input a Y for yes or N for no. If the user selects yes then the cheat sheet is printed and the loop breaks. The code is wrapped in a try block so that if the user incorrectly inputs something other then Y or N then an innapropriate input error is raised.The InnapropriateInput class has been imported from Classes.excceptions.
+# The cheatsheet function is a function that appears when the user is about to roll a dice that allows the user to view a cheatsheet if they wish.
+# The user is asked to input a choice using cheatsheet = input("Do you wish to view cheatsheet? Y/N:"). If the input is equal to Y then the print
+# sheet function imported from functions.print_cheat_sheet is executed, otherwise if the input is N for no, the loop breaks. The following code is used:
+# if cheatsheet.upper() == "Y":
+#                 print_sheet()
+#                 break
+# if cheatsheet.upper() != "N":
+# Break, breaks the loop once the if condition has been met.
+
+# Imports and Modules:
+
+# colored: The imported colored functions Fore, and style are used as described above the import from colored code
+
+# Exceptions:
+# InnapropriateInput
+# The code is wrapped in a try block and the code
+# raise InappropriateInput(
+# f"{Fore.red}Please enter Y or N{Style.reset}\n"
+# )
+# is used to raise an InnappropriateInput exception imported from classes.exceptions if the wrong input is used when asked
+# ("Do you wish to view cheatsheet? Y/N:")
+
+
 def cheatsheet():
     while True:
         try:
@@ -24,14 +58,48 @@ def cheatsheet():
         except InappropriateInput as e:
             print(e)
 
-    # This function is summary allows a user to roll any number of a selected D&D dice in addition the roll die function allows the following:
-    # - gives users an option to view a cheat sheet containing saved dice combos
-    # - performs of sum of the dice values rolled if the number rolled is >3
-    # - gives users the option to reroll dice and select a new input.
+    # This function in summary allows a user to roll any number of a selected valid dice.
+    # This function also does the following:
+    # allows users to view a cheatsheet,
+    # sums the dice if the number of dice is greater then 2,
+    # allows users to choose to reroll dice.
+    #
+    # Imports and Modules:
+
+    # Dice: The Dice class has been imported from classes.dice for use in the following code: Dice(int(n[1]))
+    # Where Dice calls the dice class that has been imported from classes.dice and turns the input n[1]
+    # (number of faces on the die/dice based on input)into an interger.
+
+    # cheatsheet():an imported function that gives players the option to view a cheatsheet.
+
+    # colored: The imported colored functions Fore, and style are used as described above the import from colored code
+
+    # repeat: Imported so users can repeat the rolldice function (repeat(rolldice)) if they choose to
+
+    # Exceptions:
+    # NonExistantDice: is a class that has been imported from classes.exceptions that raises an exception
+    # if the input is not not equal to the valid input in the valid dice list as shown below.
+    # if valid_dice.count(n[1]) == 0:
+    #     raise NonExistantDice(
+    #         f"{Fore.red}This dice does not exist pick a valid dice{Style.reset}\n")
+
+    # Negative error is a class that has been imported from classes.exceptions and raises an exception if the user inputs a negative value
+    # as shown below:
+    # raise NegativeError(
+    #     f"{Fore.red}dice number cannot be a negative number{Style.reset}\n"
+    # )
+
+    # ValueError is a built in python class that raises an exception if the inncorrect value is entered.
+    # the code below raises an error if the incorrect value has been input and prompts the user to input the correct code
+    # except ValueError:
+    #     print(
+    #         f"{Fore.red}Please input #d# note number input must be >0{Style.reset}\n"
+    #     )
+    #     continue
 
 
 def roll_dice():
-    # a list containing the appropriate dice values to select in accordance with D&D dice values
+    # a list containing the appropriate dice values to select in accordance with Tabletop RPG's like D&D dice values
     valid_dice = ["2", "4", "6", "8", "10", "12", "20", "100"]
 
     # calls the cheatsheet function which allows users to view saved dice combos before rolling
@@ -59,15 +127,15 @@ def roll_dice():
             # turns the number of dice rolls (based on input) into an interger
             number = int(n[0])
             if number < 0:
-                # Negative error is a class that has been imported from Classes.exceptions and raises an exception if the user inputs a negative value.
+                # Negative error is a class that has been imported from classes.exceptions and raises an exception if the user inputs a negative value.
                 raise NegativeError(
                     f"{Fore.red}dice number cannot be a negative number{Style.reset}\n"
                 )
 
-            # NonExistantDice is a class that has been imported from Classes.exceptions that raises an exception if the input is not not equal to the valid input in the valid dice list.
+            # NonExistantDice is a class that has been imported from classes.exceptions that raises an exception if the input is not not equal to the valid input in the valid dice list.
             if valid_dice.count(n[1]) == 0:
                 raise NonExistantDice(
-                    f"{Fore.red}This dice does not exist in D&D pick a valid dice{Style.reset}\n"
+                    f"{Fore.red}This dice does not exist pick a valid dice{Style.reset}\n"
                 )
             # the resulting dice roll is placed into an empty list
             result = []
@@ -86,7 +154,7 @@ def roll_dice():
             break
 
         # the code below raises an error if the incorrect value has been input and prompts the user to input the correct code
-        # ValueError is a built in class that raises an exception if the inncorrect value is entered.
+        # ValueError is a built in python class that raises an exception if the inncorrect value is entered.
         except ValueError:
             print(
                 f"{Fore.red}Please input #d# note number input must be >0{Style.reset}\n"
@@ -100,7 +168,19 @@ def roll_dice():
             print(e)
 
 
-# this function allows a user to repeat a dice roll by asking the user if they want to roll again with Y meaning Yes and N meaning no. The code is wrapped in a try block so that if the users input is incorrec then it raises and inappropriate input error and prompts the user to write the correct input.
+# This function allows a user to repeat a dice roll by asking the user if they want to roll again with Y meaning Yes and N meaning no.
+# Imports and modules:
+
+# Exceptions:
+# Innappropriate Input: The code is wrapped in a try block so that if the users input is incorrect
+# then it raises and inappropriate input error and prompts the user to write the correct input
+# as shown below: if roll_again.upper() != "N":
+#     raise InappropriateInput(
+#         f"{Fore.red}Please enter Y or N{Style.reset}\n"
+#     )
+# Colored: The imported colored functions Fore, and style are used as described above the import from colored code
+
+
 def repeat(function_to_repeat):
     while True:
         try:
@@ -118,6 +198,14 @@ def repeat(function_to_repeat):
 
 
 # The roll two dice function rolls two d20 dice and returns two random values to the dice list, the dice list is then sorted from lowest to highest and the resulting list is printed.
+
+# Imports:
+# Random: This function uses the built-in python class random
+# to generate a random number between 1-20 as shown in the
+# code example below:
+# firstd20 = random.randint(1, 20)
+
+
 def roll_two_dice():
     firstd20 = random.randint(1, 20)
     secondd20 = random.randint(1, 20)
@@ -127,14 +215,24 @@ def roll_two_dice():
     return dice_list
 
 
-# The advantage function calls the roll two dice function and prints the highest dice roll in the colour blue. The repeat function is also called to prompt a user if they want to roll again if Y for yes is selected then the advantage function is repeated.
+# The advantage function calls the roll two dice function and prints the highest dice roll in the color blue
+# using fore and style functions imported from colored as shown below:
+# print("Highest D20 roll is:", f"{Fore.blue}{dice_list[1]}{Style.reset}\n")
+# (futher explanation on colored can be found above the from colored code)
+# The repeat function is also imported so a user can roll again with advanatge (repeat (advanatage) if they choose to.
+
+
 def advantage():
     dice_list = roll_two_dice()
     print("Highest D20 roll is:", f"{Fore.blue}{dice_list[1]}{Style.reset}\n")
     repeat(advantage)
 
 
-# The disadvantage function calls the roll two dice function and prints the lowest dice roll in the colour red. The repeat function is also called to prompt a user if they want to roll again if Y for yes is selected then the disadvantage function is repeated.
+# The disadvantage function calls the roll two dice function and prints the lowest dice roll
+# in the colour red using fore and style functions imported from colored as shown below:
+# print("Lowest D20 roll is:", f"{Fore.red}{dice_list[0]}{Style.reset}\n")
+# (futher explanation on colored can be found above the from colored code)
+# The repeat function is also imported so a user can roll again with disadvantage (repeat (disadvanatage) if they choose to.
 def disadvantage():
     dice_list = roll_two_dice()
     print("Lowest D20 roll is:", f"{Fore.red}{dice_list[0]}{Style.reset}\n")
