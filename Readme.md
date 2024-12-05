@@ -154,20 +154,17 @@ into the file where the module is intended to be used. In this application it ha
 
 ## Application Functions:
 
-## main menu:
+## Main Menu
 
-The main menu function is the main user interface of the Tabletop RPG Dice Roller app, and allows the user to choose what they wish to do including: rolling dice, rolling with advantage and disadvantage, create and save dice combos, view a cheat sheet, and delete combos from the cheat sheet.
+This serves as the user interface for the dice roller application. This allows the user to choose between rolling dice, rolling dice with advantage or disadvantage, create a dice combo, view a cheat sheet or delete existing combos.
 
-### Roll Dice
+## Roll Dice
 
-In Tabletop RPG's like D&D there as previously mentioned there are specific dice that players roll depending on the situation the dice which are the following:
-[d2, d4, d6, d8, d10, d12, d20, and d100.]
-The roll function allows the app user to select which dice they need and how many they need to roll.
-The user also has the option to view a cheat sheet before they roll if they struggle to remember what rolls are needed for certain actions.
+In Tabletop role play games, dice rolls are referred to by “d + the number of sides on the dice.” So rolling a d6, means to roll a 6 sided die. The dice types in tabletop rpg games like D&D are: d2, d4, d6, d8, d10, d12, d20 or d100. The roll function allows the user to select which they wish to use and how many to roll. From this function, they may view their cheat sheet to remember what they are required to roll.
 
-## Disadvantage and Advantage Rolls:
+## Advantage and Disadvantage
 
-In Tabletop RPG's like D&D there are often scenarios where a player will be required to roll with disadvantage (lowest roll of two d20) or advantage (highest roll of two d20). This function allows users to roll with advantage or disadvantage, perform rerolls, and view their lowest or highest score in the terminal.
+This function allows users to roll with advantage or disadvantage, perform rerolls, and view their lowest or highest score in the terminal.
 
 ## Create dice combinations:
 
