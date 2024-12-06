@@ -1,4 +1,4 @@
-# Random is a built in python class that has been imported so that a random
+# Random is a built-in python class that has been imported so that a random
 # number can be returned in the dice class from the range of the given input, as
 # shown in the code below:
 # def roll_two_dice():
@@ -21,13 +21,6 @@ from classes.exceptions import InappropriateInput, NegativeError, NonExistantDic
 
 
 # The cheatsheet function is a function that appears when the user is about to roll a dice that allows the user to view a cheatsheet if they wish.
-# The user is asked to input a choice using cheatsheet = input("Do you wish to view cheatsheet? Y/N:"). If the input is equal to Y then the print
-# sheet function imported from functions.print_cheat_sheet is executed, otherwise if the input is N for no, the loop breaks. The following code is used:
-# if cheatsheet.upper() == "Y":
-#                 print_sheet()
-#                 break
-# if cheatsheet.upper() != "N":
-# Break, breaks the loop once the if condition has been met.
 
 # Imports and Modules:
 
@@ -41,8 +34,6 @@ from classes.exceptions import InappropriateInput, NegativeError, NonExistantDic
 # )
 # is used to raise an InnappropriateInput exception imported from classes.exceptions if the wrong input is used when asked
 # ("Do you wish to view cheatsheet? Y/N:")
-
-
 def cheatsheet():
     while True:
         try:
@@ -58,46 +49,44 @@ def cheatsheet():
         except InappropriateInput as e:
             print(e)
 
-    # This function in summary allows a user to roll any number of a selected valid dice.
-    # This function also does the following:
-    # allows users to view a cheatsheet,
-    # sums the dice if the number of dice is greater then 2,
-    # allows users to choose to reroll dice.
-    #
-    # Imports and Modules:
+# This function in summary allows a user to roll any number of a selected valid dice.
+# This function also does the following:
+# allows users to view a cheatsheet,
+# sums the dice if the number of dice is greater then 2,
+# allows users to choose to reroll dice.
+#
+# Imports and Modules:
 
-    # Dice: The Dice class has been imported from classes.dice for use in the following code: Dice(int(n[1]))
-    # Where Dice calls the dice class that has been imported from classes.dice and turns the input n[1]
-    # (number of faces on the die/dice based on input)into an interger.
+# Dice: The Dice class has been imported from classes.dice for use in the following code: Dice(int(n[1]))
+# Where Dice calls the dice class that has been imported from classes.dice and turns the input n[1]
+# (number of faces on the die/dice based on input)into an interger.
 
-    # cheatsheet():an imported function that gives players the option to view a cheatsheet.
+# cheatsheet():an imported function that gives players the option to view a cheatsheet.
 
-    # colored: The imported colored functions Fore, and style are used as described above the import from colored code
+# colored: The imported colored functions Fore, and style are used as described above the import from colored code
 
-    # repeat: Imported so users can repeat the rolldice function (repeat(rolldice)) if they choose to
+# repeat: Imported so users can repeat the rolldice function (repeat(rolldice)) if they choose to
 
-    # Exceptions:
-    # NonExistantDice: is a class that has been imported from classes.exceptions that raises an exception
-    # if the input is not not equal to the valid input in the valid dice list as shown below.
-    # if valid_dice.count(n[1]) == 0:
-    #     raise NonExistantDice(
-    #         f"{Fore.red}This dice does not exist pick a valid dice{Style.reset}\n")
+# Exceptions:
+# NonExistantDice: is a class that has been imported from classes.exceptions that raises an exception
+# if the input is not not equal to the valid input in the valid dice list as shown below.
+# if valid_dice.count(n[1]) == 0:
+#     raise NonExistantDice(
+#         f"{Fore.red}This dice does not exist pick a valid dice{Style.reset}\n")
 
-    # Negative error is a class that has been imported from classes.exceptions and raises an exception if the user inputs a negative value
-    # as shown below:
-    # raise NegativeError(
-    #     f"{Fore.red}dice number cannot be a negative number{Style.reset}\n"
-    # )
+# NegativeError is a class that has been imported from classes.exceptions and raises an exception if the user inputs a negative value
+# as shown below:
+# raise NegativeError(
+#     f"{Fore.red}dice number cannot be a negative number{Style.reset}\n"
+# )
 
-    # ValueError is a built in python class that raises an exception if the inncorrect value is entered.
-    # the code below raises an error if the incorrect value has been input and prompts the user to input the correct code
-    # except ValueError:
-    #     print(
-    #         f"{Fore.red}Please input #d# note number input must be >0{Style.reset}\n"
-    #     )
-    #     continue
-
-
+# ValueError is a built-in python class that raises an exception if the inncorrect value is entered.
+# the code below raises an error if the incorrect value has been input and prompts the user to input the correct code
+# except ValueError:
+#     print(
+#         f"{Fore.red}Please input #d# note number input must be >0{Style.reset}\n"
+#     )
+#     continue
 def roll_dice():
     # a list containing the appropriate dice values to select in accordance with Tabletop RPG's like D&D dice values
     valid_dice = ["2", "4", "6", "8", "10", "12", "20", "100"]
@@ -120,14 +109,13 @@ def roll_dice():
         # If the length is greater then two then the input is still incorrect (length of lists after D is removed)
         if len(n) > 2:
             continue
-
         try:
-            # calls the dice class that has been imported from classes.dice and turns the input (number of faces on the die/dice based on input)into an interger.
+            # calls the dice class that has been imported from classes.dice and turns the input (number of faces on the die/dice based on input) into an integer.
             dice = Dice(int(n[1]))
-            # turns the number of dice rolls (based on input) into an interger
+            # turns the number of dice rolls (based on input) into an integer
             number = int(n[0])
             if number < 0:
-                # Negative error is a class that has been imported from classes.exceptions and raises an exception if the user inputs a negative value.
+                # NegativeError is a class that has been imported from classes.exceptions and raises an exception if the user inputs a negative value.
                 raise NegativeError(
                     f"{Fore.red}dice number cannot be a negative number{Style.reset}\n"
                 )
@@ -154,7 +142,7 @@ def roll_dice():
             break
 
         # the code below raises an error if the incorrect value has been input and prompts the user to input the correct code
-        # ValueError is a built in python class that raises an exception if the inncorrect value is entered.
+        # ValueError is a built-in python class that raises an exception if the incorrect value is entered.
         except ValueError:
             print(
                 f"{Fore.red}Please input #d# note number input must be >0{Style.reset}\n"
@@ -179,8 +167,6 @@ def roll_dice():
 #         f"{Fore.red}Please enter Y or N{Style.reset}\n"
 #     )
 # Colored: The imported colored functions Fore, and style are used as described above the import from colored code
-
-
 def repeat(function_to_repeat):
     while True:
         try:
@@ -204,8 +190,6 @@ def repeat(function_to_repeat):
 # to generate a random number between 1-20 as shown in the
 # code example below:
 # firstd20 = random.randint(1, 20)
-
-
 def roll_two_dice():
     firstd20 = random.randint(1, 20)
     secondd20 = random.randint(1, 20)
@@ -220,8 +204,6 @@ def roll_two_dice():
 # print("Highest D20 roll is:", f"{Fore.blue}{dice_list[1]}{Style.reset}\n")
 # (futher explanation on colored can be found above the from colored code)
 # The repeat function is also imported so a user can roll again with advanatge (repeat (advanatage) if they choose to.
-
-
 def advantage():
     dice_list = roll_two_dice()
     print("Highest D20 roll is:", f"{Fore.blue}{dice_list[1]}{Style.reset}\n")
@@ -237,3 +219,6 @@ def disadvantage():
     dice_list = roll_two_dice()
     print("Lowest D20 roll is:", f"{Fore.red}{dice_list[0]}{Style.reset}\n")
     repeat(disadvantage)
+
+
+

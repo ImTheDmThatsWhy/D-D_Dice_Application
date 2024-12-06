@@ -4,7 +4,7 @@ Dependecies note: To run the app in VS code a PC with windows 10 or 11 is requir
 To run the app in VS code please note that if opening in Vs code then Ubuntu 22-.04 (WSL) must be installed to install this on a windows device go to the microsoft store and download the Ubuntu 22.04.5 LTS app.
 Then install windows terminal from the microsoft app store. Then follow the instructions in the link below https://learn.microsoft.com/en-us/windows/wsl/install.
 
--   Once downloaded go to VS code and use the instructions from the link below to run WSL in VS code https://learn.microsoft.com/en-us/windows/wsl/install,
+-   Once downloaded go to VS code and use the instructions from the link below to run WSL in VS code https://code.visualstudio.com/docs/remote/wsl-tutorial,
 
 Using VS code:
 To set up and run this application a user needs to perform the following steps
@@ -19,6 +19,11 @@ To set up and run this application a user needs to perform the following steps
 
 -   Once the terminal is open type python3 main.py to run the app.
 
+Note for a mac device ubuntu can also be installed using the instructions in the following link https://gbtimes.com/how-to-install-ubuntu-on-mac/
+however, the requirements listed in the instructions must be met.
+
+Vs code for Mac can also be installed.
+
 # Introduction
 
 This dice app will allow players to easily roll dice for their tabletop role play game. In a tabletop role play game, players roll dice to determine the likelihood of success for their character’s actions. The app allows players to roll many dice and different dice types, perform dice rolls with special types of modifiers and create a cheat sheet for their go-to rolls. Rolling dice is a core part of any tabletop RPG experience like D&D and this app offers an easy and efficient alternative virtual dice roller for players to use.
@@ -29,17 +34,13 @@ In a table top role play game, a group of players immerse themselves in a world 
 What is Advantage and Disadvantage?
 Advantage and Disadvantage are special dice rolls used for when a situation is either incredibly favourable or unfavourable towards the character, allowing them for that specific roll to roll their dice twice. For the roll players roll two 20 sided dice (2d20), if they have advantage, they roll twice and take the highest. If they have disadvantage, they roll twice and take the lowest.
 
-## Background: What is D&D:
-
-For people unfamiliar with campaigns like D&D, D&D stands for Dungeons and Dragons and is a fantasy table-top role playing game. In the game players form a party and embark on epic quests as they explore a world or worlds together.
-
 ## What is the purpose of dice rolls?
 
 In tabletop campaigns like D&D players will use dice rolls for a wide array of features but the main applications can be boiled down to the following:
 
--Attack rolls (do you succesfully hit a target?)
+-Attack rolls (do you successfully hit a target?)
 
--Skill checks and saving throws (Involves rolling a 20 sided die the higher you roll the more likely you are to be successful)
+-Skill checks and saving throws (Involves rolling a 20 sided die; the higher you roll the more likely you are to be successful)
 
 -Damage rolls (players are equipped with weapons which depending on what weapon they use will usually require a roll from a d6, d8, d10, or d12 die)
 
@@ -79,7 +80,7 @@ into the file you plan on using it. In this case it is the Die.py file.
 
 ### Colored Module
 
-Import color: Like the black module, the color module needs to be installed in a virtual environment the same way as the black import, but with the word black substituted for the word color. The colour module will be used to make the app more reader friendly in the terminal, by coloring outputs and headings. For example the code below colors the output of the highest or lowest roll depending on if a person is rolling with advantage or disadvantage.
+Import color: Like the black module, the color module needs to be installed in a virtual environment the same way as the black import, but with the word black substituted for the word color. The color module will be used to make the app more reader friendly in the terminal, by coloring outputs and headings. For example the code below colors the output of the highest or lowest roll depending on if a person is rolling with advantage or disadvantage.
 
 ```python
 def advantage():
@@ -154,27 +155,30 @@ into the file where the module is intended to be used. In this application it ha
 
 ## Application Functions:
 
-## Main Menu
+### Main Menu
 
 This serves as the user interface for the dice roller application. This allows the user to choose between rolling dice, rolling dice with advantage or disadvantage, create a dice combo, view a cheat sheet or delete existing combos.
 
-## Roll Dice
+### Roll Dice
 
 In Tabletop role play games, dice rolls are referred to by “d + the number of sides on the dice.” So rolling a d6, means to roll a 6 sided die. The dice types in tabletop rpg games like D&D are: d2, d4, d6, d8, d10, d12, d20 or d100. The roll function allows the user to select which they wish to use and how many to roll. From this function, they may view their cheat sheet to remember what they are required to roll.
 
-## Advantage and Disadvantage
+### Advantage and Disadvantage
 
 This function allows users to roll with advantage or disadvantage, perform rerolls, and view their lowest or highest score in the terminal.
 
-## Create dice combinations:
+### Create dice combinations:
 
 In this menu option the user is prompted to name and create a dice combination that they can view before rolling later, in case they have forgotten the specifics of dice rolls required for certain attacks or skills.
 
-## View and edit saved dice combinations:
+### View and edit saved dice combinations:
 
 Allows the user to view their saved combos and delete combos
 
 ## Licensing and Dependancies:
+
+This app will be licensed under the MIT licence to avoid potentially violating copyright law (Odence, 2024).
+Odence, P. (2024). Five types of software licenses you need to understand. [online] Blackduck.com. Available at: https://www.blackduck.com/blog/5-types-of-software-licenses-you-need-to-understand.html.
 
 ### MIT LICENSE:
 
@@ -196,7 +200,7 @@ Requirements: Python>=3.9 (requires version 3.9 or higher)
 
 License: Mit Approved license:
 
-In accordance with information found on open source intiative (https://opensource.org/license/mit), the Mit License means that permission is granted free of charge to any person who has a copy of the software. Furthermore, the software can be used without restriction and the user can use, copy, modify, merge, publish, distribute, and sell copies of the software unrestrictedly provided that the user also notes that aoftware in question (colored) is under the MIT license. As this is an open license there is no ethical concerns about the use of color is this application as I have acknowledged that colored is under the MIT license.
+In accordance with information found on open source intiative (https://opensource.org/license/mit), the Mit License means that permission is granted free of charge to any person who has a copy of the software. Furthermore, the software can be used without restriction and the user can use, copy, modify, merge, publish, distribute, and sell copies of the software unrestrictedly provided that the user also notes that software in question (colored) is under the MIT license. As this is an open license there is no ethical concerns about the use of color is this application as I have acknowledged that colored is under the MIT license.
 
 Environment: Console
 
@@ -231,8 +235,19 @@ Operating System: Os independant it works on any operating system.
 As these module are a part of python 3 the assumption is being made that they follow the license for python.
 
 License for python PSF:
-According to https://docs.python.org/3/license.html there are no ethical concerns because python software is not bundled with this appication. Therefore, there has been no breach to the terms of the license.
+According to https://docs.python.org/3/license.html there are no ethical concerns because python software is not bundled with this application. Therefore, there has been no breach to the terms of the license.
 
 ### Dependecies:
 
 For black and color modules all additional dependencies required can be found in the requirements.txt file of this application.
+
+## Privacy act
+
+Privacy: The Australian privacy act principles according to Australian Privacy Principles | OAIC govern the following:
+The collection, use, and disclosure of personal information
+An organisations/agency’s governance and accountability
+Integrity and collection of personal information
+The rights of individuals to access their personal information
+The code is centred around protecting an individual's personal information, having systems and management plans in place, and acknowledging an individual's rights in regards to personal information. In the case of this app as no personal information has been used or collected there are no ethical concerns regarding privacy with this app.
+
+Reference: OAIC (2024). Australian Privacy Principles. Office of the Australian Information Commissioner. Available at: https://www.oaic.gov.au/privacy/australian-privacy-principles.

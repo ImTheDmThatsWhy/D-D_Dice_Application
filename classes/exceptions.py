@@ -5,7 +5,7 @@
 
 # The NegativeError is a custom class that raises an exception if negative input is used.
 # Parameters:
-#     Exception: Parametre 1, is a built-in
+#     Exception: Parameter 1, is a built-in
 #     python sub class that is being used to
 #     create a custom class.
 # Code:
@@ -19,7 +19,7 @@ class NegativeError(Exception):
 # The NonExistantDice custom class is an exception that is raised if a user enters a dice combination that does not exist.
 # This is a custom class that raises an exception if a dice that does not exist is inputted.
 # Parameters:
-#     Exception: Parametre 1, is a built-in
+#     Exception: Parameter 1, is a built-in
 #     python sub class that is being used to
 #     create a custom class.
 # Code:
@@ -32,7 +32,7 @@ class NonExistantDice(Exception):
 
 # The InnappropriateInput custom class is an exception that is raised if a user enters an incorrect input when prompted.
 # Parameters:
-#     Exception: Parametre 1, is a built-in
+#     Exception: Parameter 1, is a built-in
 #     python sub class that is being used to
 #     create a custom class.
 # Code:
@@ -45,7 +45,7 @@ class InappropriateInput(Exception):
 
 # The NoInput custom class in an exception that is raised if the user leaves the input blank when prompted.
 # Parameters:
-#     Exception: Parametre 1, is a built-in
+#     Exception: Parameter 1, is a built-in
 #     python sub class that is being used to
 #     create a custom class.
 # Code:

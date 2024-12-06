@@ -12,12 +12,13 @@ from colored import Fore, Style
 from classes.exceptions import InappropriateInput
 
 
-# This function is designed to delete items in the dictionary, saved_combinations refers to the json dictionary that contains the items, and saved_combo(saved_combinations) calls the saved dictionary. If the dictionary is empty (if saved_combinations =={}:) then an error message prints, else if the items in the dictionary exist then the delete items function (delete_items()) will be called.
+# This function is designed to delete items in the dictionary, saved_combinations
+# refers to the json dictionary that contains the items, and saved_combo(saved_combinations) calls the saved dictionary.
+# If the dictionary is empty (if saved_combinations == {}:) then an error message prints, else if the items in the dictionary 
+# exist then the delete items function (delete_items()) will be called.
 # Modules and Imports:
 
 # colored: The imported colored functions Fore, and style are used as described above the import from colored code
-
-
 def print_sheet_delete():
     saved_combinations = {}
     saved_combo(saved_combinations)
@@ -29,10 +30,8 @@ def print_sheet_delete():
         print(f"{Fore.green}{saved_combinations}{Style.reset}\n")
         delete_items()
 
-
 # This function behaves in the same way as the function above however, on the else statement it prints the dictionary.
 # Modules and Imports:
-
 
 # colored: The imported colored functions Fore, and style are used as described above the import from colored code
 def print_sheet():
@@ -50,7 +49,7 @@ def print_sheet():
 # For options, a while loop is used as delete is equal to input. If Y is selected then the items are deleted
 # by first loading the dictionary using saved_combo(imported from saved.saving) then the user is prompted to
 # input a combo for deletion using combo = input ("enter name of combo you with to delete: "), the saved combo
-# is then deleted using saced_combinations.pop(combo), where pop is a command that deletes an item in a dictionary.
+# is then deleted using saved_combinations.pop(combo), where pop is a command that deletes an item in a dictionary.
 # The new dictionary is then saved using save_and_exit(saved_combinations) (save_and_exit is imported from
 # saved.saving) which saves the appended dictionary to the saved_combinations JSON file.
 # Imports and Modules:
@@ -87,14 +86,14 @@ def delete_items():
                 save_and_exit(saved_combinations)
                 break
             if delete.upper() != "N":
-                # The InnapropriateInput class has been imported from classes.excception and raises an error if the user puts in an inncorrect input.
+                # The InnapropriateInput class has been imported from classes.exception and raises an error if the user puts in an incorrect input.
                 raise InappropriateInput(
                     f"{Fore.red}Please enter Y or N{Style.reset}\n"
                 )
             break
         except InappropriateInput as e:
             print(e)
-        # The KeyError is a builtin python class that raises an error when the input does not match a key in the dictionary, raising an exception that prompts the user to try again.
+        # The KeyError is a built-in python class that raises an error when the input does not match a key in the dictionary, raising an exception that prompts the user to try again.
         except KeyError:
             print(
                 f"{Fore.red}Item name not in the list please try again{Style.reset}\n"

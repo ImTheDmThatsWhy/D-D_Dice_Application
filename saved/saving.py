@@ -23,8 +23,6 @@ from classes.exceptions import NoInput
 # to the dictionary, with open("saved/saved_combinations.json", "w") as json_file:
 # is the location where JSON output is to be stored and json.dump seralizes the
 # python object.
-
-
 def save_and_exit(saved_combinations):
     json_to_write = []
     json_to_write.append(saved_combinations)
@@ -65,8 +63,6 @@ def saved_combo(saving):
 #    print(f"{Fore.blue}dice combo accepted{Style.reset}\n")
 # The fore import stylizes the text while style.reset normalizes the text. The colored module has been used in all functions
 # listed below in the same manner as the code example above for error messages and print messages.
-
-
 def combo_and_save():
     saved_combinations = {}
     saved_combo(saved_combinations)

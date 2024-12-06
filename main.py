@@ -39,8 +39,6 @@ print(
 # cheat sheet then decide it they want to delete a saved entry.
 
 # Colored: The imported colored functions Fore, back, and style are used as described above the import from colored code
-
-
 def main_menu():
     print("Enter 1 to roll dice")
     print("Enter 2 to roll d20 with advantage or disadvantage")
@@ -77,3 +75,5 @@ while choice != "5":
 print(
     f"{Fore.red}{Back.black}Thank you for using the TableTop RPG Dice Roller App{Style.reset}\n"
 )
+
+
