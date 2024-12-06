@@ -1,0 +1,17 @@
+black==24.10.0
+charset-normalizer==3.4.0
+click==8.1.7
+colored==2.2.4
+docformatter==1.7.5
+exceptiongroup==1.2.2
+iniconfig==2.0.0
+mypy-extensions==1.0.0
+packaging==24.1
+pathspec==0.12.1
+platformdirs==4.3.6
+pluggy==1.5.0
+pydocstringformatter==0.7.3
+pytest==8.3.3
+tomli==2.0.2
+typing_extensions==4.12.2
+untokenize==0.1.1

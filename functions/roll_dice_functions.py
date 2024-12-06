@@ -26,6 +26,7 @@ from classes.exceptions import InappropriateInput, NegativeError, NonExistantDic
 
 # colored: The imported colored functions Fore, and style are used as described above the import from colored code
 
+
 # Exceptions:
 # InnapropriateInput
 # The code is wrapped in a try block and the code
@@ -48,6 +49,7 @@ def cheatsheet():
             break
         except InappropriateInput as e:
             print(e)
+
 
 # This function in summary allows a user to roll any number of a selected valid dice.
 # This function also does the following:
@@ -79,6 +81,7 @@ def cheatsheet():
 # raise NegativeError(
 #     f"{Fore.red}dice number cannot be a negative number{Style.reset}\n"
 # )
+
 
 # ValueError is a built-in python class that raises an exception if the inncorrect value is entered.
 # the code below raises an error if the incorrect value has been input and prompts the user to input the correct code
@@ -159,6 +162,7 @@ def roll_dice():
 # This function allows a user to repeat a dice roll by asking the user if they want to roll again with Y meaning Yes and N meaning no.
 # Imports and modules:
 
+
 # Exceptions:
 # Innappropriate Input: The code is wrapped in a try block so that if the users input is incorrect
 # then it raises and inappropriate input error and prompts the user to write the correct input
@@ -184,6 +188,7 @@ def repeat(function_to_repeat):
 
 
 # The roll two dice function rolls two d20 dice and returns two random values to the dice list, the dice list is then sorted from lowest to highest and the resulting list is printed.
+
 
 # Imports:
 # Random: This function uses the built-in python class random
@@ -219,6 +224,3 @@ def disadvantage():
     dice_list = roll_two_dice()
     print("Lowest D20 roll is:", f"{Fore.red}{dice_list[0]}{Style.reset}\n")
     repeat(disadvantage)
-
-
-

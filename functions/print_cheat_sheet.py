@@ -14,9 +14,10 @@ from classes.exceptions import InappropriateInput
 
 # This function is designed to delete items in the dictionary, saved_combinations
 # refers to the json dictionary that contains the items, and saved_combo(saved_combinations) calls the saved dictionary.
-# If the dictionary is empty (if saved_combinations == {}:) then an error message prints, else if the items in the dictionary 
+# If the dictionary is empty (if saved_combinations == {}:) then an error message prints, else if the items in the dictionary
 # exist then the delete items function (delete_items()) will be called.
 # Modules and Imports:
+
 
 # colored: The imported colored functions Fore, and style are used as described above the import from colored code
 def print_sheet_delete():
@@ -30,8 +31,10 @@ def print_sheet_delete():
         print(f"{Fore.green}{saved_combinations}{Style.reset}\n")
         delete_items()
 
+
 # This function behaves in the same way as the function above however, on the else statement it prints the dictionary.
 # Modules and Imports:
+
 
 # colored: The imported colored functions Fore, and style are used as described above the import from colored code
 def print_sheet():

@@ -56,6 +56,7 @@ def saved_combo(saving):
 #   NoInput is a class imported from classes.exceptions that raises an exception
 #   if the user executes an empty input.
 
+
 # The colored module has been imported so that the error messages can be colored red
 # as demonstrated in the following code example:
 #  f"{Fore.red}input cannot be left empty please provide a name{Style.reset}\n"

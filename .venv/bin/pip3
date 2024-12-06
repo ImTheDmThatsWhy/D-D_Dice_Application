@@ -1,4 +1,4 @@
-#!/home/andrea/JUL2024/markdown/basics/D&D_Dice_Application/.venv/bin/python3
+#!/home/andrea/JUL2024/markdown/basics/15792_Sutton_Andrea_ISK1001_Assessment3/.venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
