@@ -128,7 +128,7 @@ def roll_dice():
             # the resulting dice roll is placed into an empty list
             result = []
 
-            # a random number is generated based on the range specified by the input eg if input is 6 then the number genearted will be randomly selected from 1-6 and the result is appended to the empty list and printed.
+            # a repeat roll however many number specified
             for i in range((number)):
 
                 result.append(dice.roll())

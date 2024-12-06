@@ -1,3 +1,6 @@
+Feedback Given by Jairo Bilbaro: no information provided on how to start app in readme
+Action taken: instructions provided on how to start app.
+
 Feedback is given by Michael (a software developer) that pseudocode explanations should always be above the code being explained not below.
 1/12/2024 11:45am
 
@@ -11,3 +14,229 @@ Feedback given by Brendon A that more information is required in the pseudocode 
 Action taken: information has been added into the pseudocode on how the imported packages have been used throughout the code. To expand on the introduction further information on D&D and the mechanics of dice rolling has been added.
 
 Feedback 3/12/2024 Evan, Brendon on their terminal apps mainly and ethical concerns
+
+Feedback Given
+Evan/Jack
+Content Reviewed: https://github.com/Evan-Codes88/Echoes-Of-The-Forgotten/blob/main/README.md
+
+When: 03/12/24
+Who: Ben and Andrea
+Feedback Provided: 
+
+Firstly, an incredibly cool application. The readme was very easy to read and ran through everything in an easy to understand way. In terms of the content itself, I’d double check the conditions of your licenses as some of the packages you have used need to have the licences they are under specifically listed so that the license conditions are not violated. Certain licenses like the MIT licence and BSD license need the full text of the license included (I have attached a relevant article below).
+
+https://fossa.com/blog/open-source-software-licenses-101-bsd-3-clause-license/
+
+I’d also include a quick explanation of the packages that the program uses and why. Those could go into the code comments or read me, either should work. 
+
+Aside from that, we couldn’t find anything else. If you need anything, such as a review of your code comments, let us know :)
+
+Earvin/Declan
+Content Reviewed: https://github.com/declan-whitty/bank-user-management-system
+When: 03/12/24
+Who: Ben and Andrea
+Feedback Provided: 
+
+The quality of these notes are very high. The line by line level of detail that you go to makes understanding the application very easy. There are a few things I noticed that were missing or could be cleaned up. If you need anything else or have any questions, just let me know.  
+
+Code Notes
+None of the classes have explanations for what they are or do. 
+
+None of the packages have explanations for what they are or do. 
+
+These code notes could use a blurb at the top of the function explaining what the function intends to do and what the user would be using them for. Instead of simply putting “deposit method”, I’d explain what it does and how. 
+
+The convention in which the code comments are written is inconsistent. Having the comments on the right of the function means the reviewer has to read right to left. Conventionally comments go above the code it explains so that the user has an idea of what it is before they attempt to decipher it.
+
+
+#this is the class, it controls X user experience
+class Feedback
+#this function performs Y
+def example_feedback(learning):
+#this is the first line of the code, it handles step Z
+self.feedback = feedback
+
+Ethical Concerns
+This application handles valuable assets of the user and their private information. While this data is clearly seeded as an example, if this application were real, it would require statements handling these concerns such as a privacy policy. Having an account number be all that is required to deposit or withdraw money is a clear security risk. I recommend doing a write up somewhere to explain these risks to the user before they use the application. 
+
+Brendon A/Tanya
+Content Reviewed: https://github.com/Donjella/ISK1001-assignment-3/tree/main/terminal_app_code_summary/functions
+
+When: 05/12/24
+Who: Ben and Andrea
+Feedback Provided: 
+
+Hey Brendon. Both the code comments and read me for your project are incredibly comprehensive and high quality.  Andrea and I have taken a look through it and had trouble finding  feedback to critique your team on. There may not be much critique here, but we will run through our process. 
+
+__Code Comments__
+- These comments are incredibly thorough. 
+- The step by step nature is clean cut and easy to follow. 
+- The purpose, argument, example formatting makes the code incredibly easy to understand. 
+- We proofread looking for typos or mistakes and couldn't find any. 
+- Everything, down to each individual argument is explained. 
+- Pep8 is followed
+
+__Read Me__
+- The read me has steps to install, dependencies, system/hardware and features are all explained in detail. 
+- All features have precise explanations, even going as far as to review error handling and input validation. 
+- The step by step instructions highlight the entire user experience. 
+- Code examples are provided throughout the entire document. 
+
+__Ethical Considerations__
+- Privacy: Privacy act, down to the specific articles, is referenced
+- Sensitive Information: Steps taken to ensure the CLI does not interact with external systems
+- Intellectual Property: No intellectual property is used. All information in the read me is properly referenced.
+- Accessibility: Steps were taken to provide easy access
+- Future Proofing: Explains given time, admin privileges would be added to provide further protection for the user. 
+
+This project meets all criteria defined in the assessment brief.
+
+Feedback Received
+https://github.com/ImTheDmThatsWhy/D-D_Dice_Application/tree/main
+Evan/Jack
+Strengths
+Comprehensive Explanations
+Each function has comments explaining its purpose, usage, and expected behaviour, which helps understand the code's functionality.
+
+Logical Flow
+The comments follow the logical sequence of operations, which is helpful for someone unfamiliar with the code.
+
+Detailed Parameter Descriptions
+Explanations about what inputs are expected (like "Y/N" choices) are clear and informative.
+
+Areas For Improvement
+Clarify Complex Logic Steps
+Some of the code blocks contain logical operations that would benefit from an explanation about their purpose.
+
+For example:
+if len(n) < 2:
+               continue
+
+Recommendation
+Add a comment explaining why this condition is important, such as ensuring the input follows the correct format.
+
+Ethics
+If your D&D dice roller uses any assets, libraries, or code snippets from other developers, it is important to ensure you have the proper licensing - in order to comply with any open-source licences, like MIT, GPL. Additionally, D&D is copyrighted intellectual property, and any references or themes tied to it may need to adhere to the rights of the creators.
+
+Overall-Explanation
+I know that the README file will probably contain an explanation of the app as a whole, but it might be worth at some point explaining how all of these functions in this file work together, like the purpose and flow of the program.
+
+Earvin/Declan
+Feedback for Documentation
+README file
+Explaining Setup and dependencies
+Explanations of how to set up the application seem to be very detailed, showing step-by-step how to access the application from GitHub and onto the user's local machine. Documentation also goes further to provide links to official documentation to assist in accessing the app with Python.
+
+Also listed are all external libraries such as colored or built-in modules such as JSON. Documentation on set-up seems to be covered very well.
+
+Purpose of Application
+The explanation of the application to users seems quite brief, especially for people who are not familiar with Dungeons and Dragons. However users may be able to get more of an idea of the app by following the steps and running it. Perhaps it would be more understandable to explain the different dice rolls or even the flow of the game.
+
+Features of Application
+The documentation does well to explain the individual functions within the app. It adds more detail about the general purpose of the app which is needed. Listing future functions to implement is very helpful for other developers.
+
+In terms of code comments they do well to explain the purpose of a function and a class very clearly.  Maybe some lines can be explained like 'if' statements. For example one of your functions  
+
+delete_items() 
+  .  You can explain what happens for each condition.
+Brendon A/Tanya
+Feedback Details
+Specific Documentation Checked: Documentation for Ben’s D&D dice-rolling app
+When it was checked:	04/12/2024
+Who checked it: Tanya Chukau and Brendon Ang
+
+Feedback provided
+Detailed steps for setup are helpful but need some proofreading for typos.
+Ethical considerations such as accessibility and possibly copyright issues with using the name D&D and Open Game Licence considerations
+Potential expansion for Mac users
+PEP8 best practices with code comments
+Fairness in dice roll considerations
+
+Actions needed based on feedback
+Proofread documentation
+Add missing setup steps for macOS/Linux if possible
+Research copyright laws if pursuing with D&D app name. 
+
+Usefulness and Ethical Considerations
+Usefulness: 
+The detailed setup instructions and module breakdown are highly beneficial, especially for developers unfamiliar with Python or terminal apps. However, the inclusion of platform-specific setup instructions (e.g., Linux/macOS) would enhance the application further.
+In the introduction it states “wish to make a check they roll 2d20” – for someone that is unfamiliar with the term 2d20, it would be useful to describe what 2d20 means. I had to look it up and I think it means rolling two 20-sided dice? 
+
+Ethical Considerations: 
+Industry-relevant standards, such as proper licensing and inclusivity, are partially addressed but need further emphasis to align with the Copyright Act 1968, and Disability Discrimination Act 1992. Potential copyright issues related to the use of intellectual property (IP) from Dungeons & Dragons, property of Wizards of the Coast.
+
+PEP8 – According to industry best practices - PEP 8 advises keeping code at 79 characters or fewer per line, it suggests a max of 72 characters for inline comments and docstrings. For example, in your code comments, the comment above the advantage_disadvantage_menu() function has 225 characters.
+
+ACM/IEEE Software Engineering Code of Ethics and Professional Practice – and other relevant guidelines/laws/regulations can be mentioned to explain how the dice rolls are unbiased in their randomness.
+
+Proofread and Correct Documentation: Assign someone to proofread or use tools like Grammarly to refine the documentation. This will also improve accessibility for users. 
+Clarify Platform Support: Possibly include instructions for macOS/Linux for inclusivity.
+Check copyright laws and OGL for D&D: Use terms like “D&D-inspired” or “Tabletop RPG Dice Roller” to make it clear that your app is not officially associated with Wizards of the Coast. While certain elements of D&D are protected by copyright, there are also parts of the D&D system that are released under the Open Gaming License (OGL), which allows for some use in third-party creations. 
+
+Explanation of Terms: Providing a clear explanation of terms like d6 and d8 (e.g., d6 refers to a 6-sided die, d8 refers to an 8-sided die) at the beginning of your documentation or in a prominently visible section would help clarify their meaning for readers. By explicitly stating that the app is unofficial and not endorsed by Wizards of the Coast, you clarify to users that the app is independently developed. This avoids misleading users about the origin or endorsement of the app and supports transparency about ownership and affiliation.
+
+PEP8 guidelines and industry best practice – Review codes and check if it ensures the following – “PEP 8 advises keeping code at 79 characters or fewer per line, it suggests a max of 72 characters for inline comments and docstrings. If your comment is approaching or exceeding that length, then you’ll want to spread it out over multiple lines.”
+
+Unbiased diced rolls - ACM/IEEE Software Engineering Code of Ethics and Professional Practice principle 1.3 supports ensuring that the software functions as intended (e.g., random number generation for fair rolls are fair in your game) without misleading or harming users. Hence, this and other relevant laws/regulations/guidelines may be added to support your project’s ethical consideration on fairness and biasness. In ISO/IEC 25010:2011 (Software Quality Model): Reliability and Functionality are key attributes under this standard, which ensure software provides consistent and accurate results, such as unbiased dice rolls.
+
+What was done well:
+Comprehensive Dice Functionality: The app’s functionality to simulate various dice rolls which range from standard D&D dice to rolling with advantage and disadvantage options, effectively captures the essential mechanics of Dungeons & Dragons. This feature allows players to seamlessly integrate the app into their campaigns, saving time and reducing complexity during gameplay.
+
+Cheat Sheet Feature: The cheat sheet function is an excellent addition to the app, allowing users to quickly reference dice combinations needed for specific actions or abilities. This reduces downtime during the game and helps players focus more on the narrative and strategy.
+User-Friendly Interface: The integration of the “colored” module to make terminal outputs visually appealing and easy to follow is a great design choice. It enhances readability and user experience.
+
+Practical Use of JSON for Saving Combinations: The use of JSON to save and load dice combinations, demonstrates good practice in managing data within the app. This feature is particularly useful for users who want to save their custom dice combos for future use, making it more convenient during campaigns.
+
+
+
+Feedback Reflection
+Evan/Jack
+Feedback Given
+Code blocks contain logical operations that benefit from greater explanation 
+MIT and GPL licensing missing
+D&D is intellectual property
+
+Action Taken
+Expanded Code notes around logical operations
+Theming of program changed from D&D to “Tabletop Roleplay Game”
+
+Earvin/Declan
+Feedback Given
+Explanation of the brief is brief. 
+More explanation required for those not familiar with D&D
+List of future functions would be helpful for other developers
+All functions are not explained with the same level of detail ie delete_items
+
+Action Taken
+Explanation of the program has been re-written to expand on the miscommunications expressed in this feedback
+Code comments expanded upon. Including code examples. 
+Brendon A/Tanya
+Feedback Given
+Detailed steps for setup are helpful but need some proofreading for typos.
+Ethical considerations such as accessibility and possibly copyright issues with using the name D&D and Open Game Licence considerations
+Potential expansion for Mac users
+PEP8 best practices with code comments
+Fairness in dice roll considerations
+
+Action Taken
+ReadMe was proofread for typos and re-written in confusing parts
+Terminology clarified
+Application was adjusted to not include WOTC IP
+Code comments expanded upon
+
+Michael (Professional in Field) 
+Feedback Given For this stage application was checked against marking rubric
+
+Given by Michael 5/12/2024:
+-Final checkover
+-Consider associating the app with a licence 
+-Double check the set up in the readme
+Action Taken
+Action taken: The app was associated with a licence to avoid potential confusion, and the set up was double checked which led to the discovery of an incorrect link which was fixed.
+
+
+Read Me Revisions
+Change the name of the app
+Replace any mention of D&D with Tabletop RPG. I won’t include every example, we’ll simply need to skim the document. 
+Imports section seems good. I don’t feel like this needs changing. 
+Feedback has mentioned tonnes of licenses that aren’t included in our project. I’ve listed a few below. This section is still a work in progress. 

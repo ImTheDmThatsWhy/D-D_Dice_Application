@@ -32,3 +32,7 @@ class Dice:
     #     return random.randint(1, self.value)
     def roll(self):
         return random.randint(1, self.value)
+
+
+
+
